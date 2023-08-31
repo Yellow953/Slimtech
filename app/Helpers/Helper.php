@@ -3,7 +3,6 @@
 namespace App\Helpers;
 
 use App\Models\Currency;
-use App\Models\Vat;
 
 class Helper
 {
@@ -34,16 +33,6 @@ class Helper
             return $currency->rate;
         } catch (\Throwable $th) {
             session()->flash('error', 'No such currency in our database!');
-        }
-    }
-
-    public static function get_vat()
-    {
-        try {
-            $vat = Vat::firstOrFail();
-            return $vat->value;
-        } catch (\Throwable $th) {
-            session()->flash('error', 'No Vat in our database!');
         }
     }
 }

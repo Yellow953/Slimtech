@@ -20,68 +20,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $bundles = Product::where('is_bundle', true)->get();
-        return view('index', compact('bundles'));
-    }
-
-    public function download_refund_policy()
-    {
-        $filename = "refund_policy.pdf";
-        $publicPath = public_path();
-
-        $filePath = $publicPath . '/assets/pdf/' . $filename;
-
-        if (file_exists($filePath)) {
-            $mime = mime_content_type($filePath);
-            return response()->download($filePath, $filename, ['Content-Type' => $mime]);
-        } else {
-            return response()->json(['error' => 'File not found.'], 404);
-        }
-    }
-
-    public function download_shipping_policy()
-    {
-        $filename = "shipping_policy.pdf";
-        $publicPath = public_path();
-
-        $filePath = $publicPath . '/assets/pdf/' . $filename;
-
-        if (file_exists($filePath)) {
-            $mime = mime_content_type($filePath);
-            return response()->download($filePath, $filename, ['Content-Type' => $mime]);
-        } else {
-            return response()->json(['error' => 'File not found.'], 404);
-        }
-    }
-
-    public function download_privacy_policy()
-    {
-        $filename = "privacy_policy.pdf";
-        $publicPath = public_path();
-
-        $filePath = $publicPath . '/assets/pdf/' . $filename;
-
-        if (file_exists($filePath)) {
-            $mime = mime_content_type($filePath);
-            return response()->download($filePath, $filename, ['Content-Type' => $mime]);
-        } else {
-            return response()->json(['error' => 'File not found.'], 404);
-        }
-    }
-
-    public function download_terms_of_service()
-    {
-        $filename = "terms_of_service.pdf";
-        $publicPath = public_path();
-
-        $filePath = $publicPath . '/assets/pdf/' . $filename;
-
-        if (file_exists($filePath)) {
-            $mime = mime_content_type($filePath);
-            return response()->download($filePath, $filename, ['Content-Type' => $mime]);
-        } else {
-            return response()->json(['error' => 'File not found.'], 404);
-        }
+        return view('index');
     }
 
     public function custom_logout()
@@ -93,7 +32,7 @@ class HomeController extends Controller
 
     public function shop()
     {
-        $categories = Category::all();
+        $categories = Category::select('name')->get();
 
         $search = request()->query('search');
         if ($search) {

@@ -46,7 +46,6 @@ class BackupController extends Controller
             $sheet->setCellValue('A' . $rows, $d->id);
             $sheet->setCellValue('B' . $rows, $d->name);
             $sheet->setCellValue('C' . $rows, $d->email);
-            $sheet->setCellValue('E' . $rows, $d->phone ?? '');
             $sheet->setCellValue('D' . $rows, $d->role);
             $sheet->setCellValue('F' . $rows, $d->created_at);
             $rows++;
@@ -228,7 +227,6 @@ class BackupController extends Controller
         $spreadsheet = IOFactory::load($the_file->getRealPath());
         $sheet = $spreadsheet->getActiveSheet();
         $row_limit = $sheet->getHighestDataRow();
-        $column_limit = $sheet->getHighestDataColumn();
         $row_range = range(2, $row_limit);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
@@ -261,7 +259,6 @@ class BackupController extends Controller
         $spreadsheet = IOFactory::load($the_file->getRealPath());
         $sheet = $spreadsheet->getActiveSheet();
         $row_limit = $sheet->getHighestDataRow();
-        $column_limit = $sheet->getHighestDataColumn();
         $row_range = range(2, $row_limit);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
@@ -300,7 +297,6 @@ class BackupController extends Controller
         $spreadsheet = IOFactory::load($the_file->getRealPath());
         $sheet = $spreadsheet->getActiveSheet();
         $row_limit = $sheet->getHighestDataRow();
-        $column_limit = $sheet->getHighestDataColumn();
         $row_range = range(2, $row_limit);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
@@ -333,7 +329,6 @@ class BackupController extends Controller
         $spreadsheet = IOFactory::load($the_file->getRealPath());
         $sheet = $spreadsheet->getActiveSheet();
         $row_limit = $sheet->getHighestDataRow();
-        $column_limit = $sheet->getHighestDataColumn();
         $row_range = range(2, $row_limit);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');

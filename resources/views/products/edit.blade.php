@@ -25,10 +25,6 @@
                 <input class="form-control input-rounded" name="sell_price" required type="number" step="0.01"
                     value="{{$product->sell_price}}">
             </div>
-            <div class="form-group">
-                <label for="image" class="col-form-label">Image</label>
-                <input class="form-control input-rounded image" name="image" type="file">
-            </div>
 
             <div class="form-group">
                 <label for="category_id" class="col-form-label">Category *</label>
@@ -48,15 +44,8 @@
             </div>
 
             <div class="form-group">
-                <label for="instagram_link" class="col-form-label">Instagram Link</label>
-                <input class="form-control input-rounded" type="text" placeholder="Instagram Link" name="instagram_link"
-                    value="{{$product->instagram_link}}">
-            </div>
-
-            <div class="form-group">
-                <label for="facebook_link" class="col-form-label">Facebook Link</label>
-                <input class="form-control input-rounded" type="text" placeholder="Facebook Link" name="facebook_link"
-                    value="{{$product->facebook_link}}">
+                <label for="image" class="col-form-label">Image</label>
+                <input class="form-control input-rounded image" name="image" type="file">
             </div>
 
             <div class="w-100 d-flex justify-content-end">
@@ -65,17 +54,5 @@
         </form>
     </div>
 </div>
-
-<script>
-    // disable enter key
-    $(document).ready(function() {
-        $(window).keydown(function(event){
-            if(event.keyCode == 13) {
-            event.preventDefault();
-            return false;
-            }
-        });
-    });
-</script>
 
 @endsection

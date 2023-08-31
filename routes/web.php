@@ -57,6 +57,8 @@ Route::get('/product/{id}/edit', [App\Http\Controllers\ProductController::class,
 Route::post('/product/{id}/update', [App\Http\Controllers\ProductController::class, 'update']);
 Route::get('/product/{id}/import', [App\Http\Controllers\ProductController::class, 'import']);
 Route::post('/product/{id}/save', [App\Http\Controllers\ProductController::class, 'save']);
+Route::get('/product/{id}/rent', [App\Http\Controllers\ProductController::class, 'rent']);
+Route::post('/product/{id}/rent_save', [App\Http\Controllers\ProductController::class, 'rent_save']);
 Route::get('/product/{id}/destroy', [App\Http\Controllers\ProductController::class, 'destroy']);
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'index']);
 

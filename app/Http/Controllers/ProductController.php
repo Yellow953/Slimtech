@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Log;
 use App\Models\Product;
-use App\Models\SecondaryImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
@@ -161,52 +160,34 @@ class ProductController extends Controller
         return redirect('/products')->with('success', 'Product was successfully imported.');
     }
 
-    public function secondary_images_index($id)
+    public function rent($id)
     {
         $product = Product::findOrFail($id);
-        $secondary_images = SecondaryImage::where('product_id', $id)->get();
-
-        $data = compact('product', 'secondary_images');
-        return view('products.secondary_images', $data);
+        return view('products.rent', compact('product'));
     }
 
-    public function secondary_images_create(Request $request)
+    public function rent_save(Request $request, $id)
     {
-        $this->validate($request, [
-            'images.*' => 'image'
+        $request->validate([
+            'quantity' => 'required|numeric',
+            'rented_untill' => 'required|date',
         ]);
-        $product = Product::findOrFail($request->product_id);
 
-        foreach ($request->file('images') as $index => $image) {
-            $ext = $image->getClientOriginalExtension();
-            $filename = $product->name . '_' . $index . '.' . $ext;
-            $image = Image::make($image);
-            $image->fit(300, 300, function ($constraint) {
-                $constraint->upsize();
-            });
-            $image->save(public_path('uploads/products/' . $filename));
-            $path = '/uploads/products/' . $filename;
-
-            SecondaryImage::create([
-                'product_id' => $request->product_id,
-                'image' => $path,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
+        if ($request->quantity <= 0) {
+            return redirect()->back()->with('danger', 'Negative Values...');
         }
 
-        return redirect()->back()->with('success', 'Secondary Images uploaded successfully...');
-    }
+        $product = Product::findOrFail($id);
 
-    public function secondary_images_destroy($id)
-    {
-        $secondary_image = SecondaryImage::findOrFail($id);
+        $product->quantity -= $request->quantity;
+        $product->status = "rented";
+        $product->rented_untill = $request->rented_untill;
 
-        $path = public_path($secondary_image->image);
-        File::delete($path);
-        $secondary_image->delete();
+        $text = "Product " . $product->name . " rented " . $request->quantity . "pcs created, datetime: " . now();
+        Log::create(['text' => $text]);
 
-        return redirect()->back()->with('danger', 'Secondary Image deleted...');
+        $product->save();
+        return redirect('/products')->with('success', 'Product was successfully imported.');
     }
 
 }

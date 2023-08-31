@@ -31,16 +31,6 @@
                 <input class="form-control input-rounded" name="sell_price" required type="number" step="0.01"
                     value="{{ old('sell_price') }}">
             </div>
-            <div class="form-group">
-                <label for="image" class="col-form-label">Image</label>
-                <input class="form-control input-rounded image" name="image" type="file">
-            </div>
-
-            <div class="form-group">
-                <img src="{{ asset('assets/images/no_img.png') }}" style="width: 100px"
-                    class="img-thumbnail image-preview" alt="">
-            </div>
-
 
             <div class="form-group">
                 <label for="category_id" class="col-form-label">Category *</label>
@@ -54,26 +44,14 @@
             </div>
 
             <div class="form-group">
+                <label for="image" class="col-form-label">Image</label>
+                <input class="form-control input-rounded image" name="image" type="file">
+            </div>
+
+            <div class="form-group">
                 <label for="description" class="col-form-label">Description</label>
                 <input class="form-control input-rounded" type="text" placeholder="Description" name="description"
                     value="{{old('description')}}">
-            </div>
-
-            <div class="form-group">
-                <label for="instagram_link" class="col-form-label">Instagram Link</label>
-                <input class="form-control input-rounded" type="text" placeholder="Instagram Link" name="instagram_link"
-                    value="{{old('instagram_link')}}">
-            </div>
-
-            <div class="form-group">
-                <label for="facebook_link" class="col-form-label">Facebook Link</label>
-                <input class="form-control input-rounded" type="text" placeholder="Facebook Link" name="facebook_link"
-                    value="{{old('facebook_link')}}">
-            </div>
-
-            <div class="form-group d-flex">
-                <input class="" type="checkbox" name="is_bundle">
-                <label for="is_bundle" class="col-form-label mx-2">Bundle</label>
             </div>
 
             <div class="w-100 d-flex justify-content-end">

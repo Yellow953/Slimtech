@@ -12,6 +12,8 @@ return new class extends Migration {
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('order_id')->unsigned();
             $table->double('quantity')->default(1);
+            $table->string('type')->default('buy');
+            $table->date('rented_untill')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');

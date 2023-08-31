@@ -16,11 +16,10 @@ return new class extends Migration {
             $table->text('description')->nullable();
             $table->string('image')->default('assets/images/no_img.png');
 
-            $table->string('instagram_link')->nullable();
-            $table->string('facebook_link')->nullable();
+            $table->string('status')->default('available');
+            $table->date('rented_untill')->nullable();
 
             $table->bigInteger("category_id")->unsigned();
-            $table->float("is_bundle")->default(false);
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
