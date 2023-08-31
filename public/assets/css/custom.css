@@ -1,0 +1,119 @@
+body {
+  font-family: "Merriweather", serif !important;
+}
+.custom-font {
+  font-family: "Merriweather", serif !important;
+}
+
+/* Big devices */
+.hero_img {
+  width: 50vw;
+  height: 65vh;
+}
+
+.logo_hero {
+  width: 200px;
+  height: 200px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.link {
+  background-color: #46a3a6;
+  color: black;
+  border-radius: 50%;
+  width: 60px; /* Adjust the size of the button as needed */
+  height: 60px; /* Adjust the size of the button as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.link svg {
+  width: 35px; /* Adjust the size of the SVG icon as needed */
+  height: 35px; /* Adjust the size of the SVG icon as needed */
+}
+
+.border-rounded {
+  border-radius: 25px;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+}
+
+.testemonial_img {
+  width: 50px;
+  height: 50px;
+}
+
+.custom-size {
+  font-size: 2rem;
+}
+
+/* Medium devices */
+@media only screen and (max-width: 900px) {
+  .hero_img {
+    width: 100vw;
+    height: 45vh;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+  .hero_img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .logo_hero {
+    width: 75px;
+    height: 75px;
+  }
+  .header {
+    padding-top: 10px;
+  }
+}
+
+.image-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: filter 0.3s;
+}
+
+.image-wrapper:hover {
+  filter: brightness(50%);
+}
+
+.delete-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font: 1rem bold;
+}
+
+.image-wrapper:hover .delete-overlay {
+  opacity: 1;
+}
