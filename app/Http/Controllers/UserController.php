@@ -30,18 +30,17 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'password' => 'required',
-            'role' => 'required',
+            'password' => 'required'
         ]);
 
         if ($request->password == $request->password_confirmation) {
             $user = new User();
             $user->email = $request->email;
             $user->name = $request->name;
-            $user->phone = $request->phone;
             $user->role = $request->role;
             $user->password = Hash::make($request->password);
-            $user->email_verified_at = now();
+            $user->phone = $request->phone;
+            $user->address = $request->address;
 
             $text = "User " . $request->name . " created, datetime: " . now();
             Log::create(['text' => $text]);
