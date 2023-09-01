@@ -15,12 +15,22 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth'])->except('index');
+        $this->middleware(['auth'])->except('index', 'about', 'contact');
     }
 
     public function index()
     {
         return view('index');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 
     public function custom_logout()
@@ -131,7 +141,7 @@ class HomeController extends Controller
 
     public function UpdatePassword(Request $request)
     {
-        $user = Auth()->user();
+        $user = auth()->user();
         if (!Hash::check($request->current_password, $user->password)) {
             return back()->with("danger", "Old Password Doesn't match!");
         }

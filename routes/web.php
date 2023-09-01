@@ -97,6 +97,11 @@ Route::get('/shop', [App\Http\Controllers\HomeController::class, 'shop'])->name(
 // Cart
 Route::get('/cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart');
 
+// About
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+// Contact
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+
 // Profile
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile']);
 Route::post('/profile/save', [App\Http\Controllers\HomeController::class, 'save_profile']);
