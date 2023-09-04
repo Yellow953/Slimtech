@@ -201,7 +201,8 @@
 
 
 <!-- Subscribe Start -->
-<div class="subscribe container-fluid my-5 py-5 text-center">
+<div class="subscribe container-fluid my-5 py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url({{asset('assets/images/bg.jpg')}});">
     <h4 class="display-4 text-white font-weight-bold mt-5 mb-3">Subscribe Our Newsletter</h4>
     <p class="text-white mb-4">Subscribe and get Our latest article in your inbox</p>
     <form class="form-inline justify-content-center mb-5">
@@ -595,152 +596,9 @@
 </div>
 <!-- Class Timetable End -->
 
-
-<!-- BMI Calculation Start -->
-<div class="container-fluid position-relative bmi my-5">
-    <div class="container">
-        <div class="row px-3 align-items-center">
-            <div class="col-md-6">
-                <div class="pr-md-3 d-none d-md-block">
-                    <h4 class="text-primary">Body Mass Index </h4>
-                    <h4 class="display-4 text-white font-weight-bold mb-4">Whate is BMI?</h4>
-                    <p class="m-0 text-white">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita
-                        lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat
-                        diam</p>
-                </div>
-            </div>
-            <div class="col-md-6 bg-secondary py-5">
-                <div class="py-5 px-3">
-                    <h1 class="mb-4 text-white">Calculate your BMI</h1>
-                    <form>
-                        <div class="form-row">
-                            <div class="col form-group">
-                                <input type="text" class="form-control form-control-lg bg-dark text-white"
-                                    placeholder="Weight (KG)">
-                            </div>
-                            <div class="col form-group">
-                                <input type="text" class="form-control form-control-lg bg-dark text-white"
-                                    placeholder="Height (CM)">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col form-group">
-                                <input type="text" class="form-control form-control-lg bg-dark text-white"
-                                    placeholder="Age">
-                            </div>
-                            <div class="col form-group">
-                                <select class="custom-select custom-select-lg bg-dark text-muted">
-                                    <option>Gender</option>
-                                    <option>Mal</option>
-                                    <option>Female</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="button" class="btn btn-lg btn-block btn-dark border-light"
-                                    value="Calculate Now">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- BMI Calculation End -->
-
-
-<!-- Team Start -->
-<div class="container pt-5 team">
-    <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Our Trainers</h4>
-        <h4 class="display-4 font-weight-bold">Meet Our Expert Trainers</h4>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-1.jpg')}}')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-2.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-3.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-4.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
-
-
 <!-- Testimonial Start -->
-<div class="container-fluid position-relative testimonial my-5">
+<div class="container-fluid position-relative testimonial my-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url({{asset('assets/images/bg.jpg')}});">
     <div class="container">
         <div class="row px-3 align-items-center">
             <div class="col-md-6 bg-secondary">
@@ -801,10 +659,8 @@
             <div class="col-md-6">
                 <div class="pl-md-3 d-none d-md-block">
                     <h4 class="text-primary">Testimonial</h4>
-                    <h4 class="display-4 mb-4 text-white font-weight-bold">What Our Clients Say?</h4>
-                    <p class="m-0 text-white">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita
-                        lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat
-                        diam</p>
+                    <h4 class="display-4 mb-4 text-white font-weight-bold">Client Feedback</h4>
+                    <p class="m-0 text-white">See what our satisfied clients say after trying our products...</p>
                 </div>
             </div>
         </div>

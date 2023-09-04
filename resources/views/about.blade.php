@@ -5,7 +5,8 @@
 @include('layouts._header')
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header mb-5">
+<div class="container-fluid page-header mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url({{asset('assets/images/bg.jpg')}});">
     <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
         <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">About Us</h4>
         <div class="d-inline-flex">
@@ -82,94 +83,6 @@
     </div>
 </div>
 <!-- Features End -->
-
-
-<!-- Team Start -->
-<div class="container pt-5 team">
-    <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Our Trainers</h4>
-        <h4 class="display-4 font-weight-bold">Meet Our Expert Trainers</h4>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-1.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-2.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-3.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <div class="card border-0 bg-secondary text-center text-white">
-                <img class="card-img-top" src="{{asset('assets/images/team-4.jpg')}}" alt="">
-                <div class="card-social d-flex align-items-center justify-content-center">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
-                        style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="card-body bg-secondary">
-                    <h4 class="card-title text-primary">Trainer Name</h4>
-                    <p class="card-text">Trainer</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
 
 @include('layouts._footer')
 
