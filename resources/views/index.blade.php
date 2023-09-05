@@ -11,7 +11,7 @@
             <div class="carousel-item active">
                 <img class="w-100" src="{{asset('assets/images/carousel-1.jpg')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
+                    <h3 class="text-info text-capitalize m-0">Gym & Fitness Center</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Best Gym In
                         Town</h2>
                     <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
@@ -20,7 +20,7 @@
             <div class="carousel-item">
                 <img class="w-100" src="{{asset('assets/images/carousel-2.jpg')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
+                    <h3 class="text-info text-capitalize m-0">Gym & Fitness Center</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Get Body In
                         Shape</h2>
                     <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
@@ -43,7 +43,7 @@
     <div class="row px-3">
         <div class="col-md-6 p-0">
             <div
-                class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-primary text-right text-white py-5 px-5">
+                class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-info text-right text-white py-5 px-5">
                 <i class="flaticon-six-pack"></i>
                 <h3 class="display-4 mb-3 text-white font-weight-bold">Body Building</h3>
                 <p>
@@ -81,17 +81,17 @@
             <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
             <div class="row py-2">
                 <div class="col-sm-6">
-                    <i class="flaticon-barbell display-2 text-primary"></i>
+                    <i class="flaticon-barbell display-2 text-info"></i>
                     <h4 class="font-weight-bold">Certified GYM Center</h4>
                     <p>Ipsum sanctu dolor ipsum dolore sit et kasd duo</p>
                 </div>
                 <div class="col-sm-6">
-                    <i class="flaticon-medal display-2 text-primary"></i>
+                    <i class="flaticon-medal display-2 text-info"></i>
                     <h4 class="font-weight-bold">Award Winning</h4>
                     <p>Ipsum sanctu dolor ipsum dolore sit et kasd duo</p>
                 </div>
             </div>
-            <a href="" class="btn btn-lg px-4 btn-outline-primary">Learn More</a>
+            <a href="" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
         </div>
     </div>
 </div>
@@ -103,7 +103,7 @@
     <div class="row">
         <div class="col-lg-4 p-0">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
-                <i class="flaticon-training display-3 text-primary mr-3"></i>
+                <i class="flaticon-training display-3 text-info mr-3"></i>
                 <div class="">
                     <h2 class="text-white mb-3">Progression</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="col-lg-4 p-0">
-            <div class="d-flex align-items-center bg-primary text-white px-5" style="min-height: 300px;">
+            <div class="d-flex align-items-center bg-info text-white px-5" style="min-height: 300px;">
                 <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
                 <div class="">
                     <h2 class="text-white mb-3">Workout</h2>
@@ -123,7 +123,7 @@
         </div>
         <div class="col-lg-4 p-0">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
-                <i class="flaticon-treadmill display-3 text-primary mr-3"></i>
+                <i class="flaticon-treadmill display-3 text-info mr-3"></i>
                 <div class="">
                     <h2 class="text-white mb-3">Nutrition</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
@@ -139,7 +139,7 @@
 <!-- GYM Feature Start -->
 <div class="container feature pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Why Choose Us?</h4>
+        <h4 class="text-info font-weight-bold">Why Choose Us?</h4>
         <h4 class="display-4 font-weight-bold">Benifits of Joining Our GYM</h4>
     </div>
     <div class="row">
@@ -209,7 +209,7 @@ url({{asset('assets/images/bg.jpg')}});">
         <div class="input-group">
             <input type="text" class="form-control-lg" placeholder="Your Email">
             <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Subscribe</button>
+                <button class="btn btn-info" type="submit">Subscribe</button>
             </div>
         </div>
     </form>
@@ -220,7 +220,7 @@ url({{asset('assets/images/bg.jpg')}});">
 <!-- Class Timetable Start -->
 <div class="container gym-feature py-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Class Timetable</h4>
+        <h4 class="text-info font-weight-bold">Class Timetable</h4>
         <h4 class="display-4 font-weight-bold">Working Hours and Class Time</h4>
     </div>
     <div class="tab-class">
@@ -345,7 +345,7 @@ url({{asset('assets/images/bg.jpg')}});">
                         <tbody class="text-center">
                             <tr>
                                 <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Cardio</h5>John Deo
                                 </td>
                                 <td></td>
@@ -357,7 +357,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Cardio</h5>John Deo
                                 </td>
                             </tr>
@@ -368,7 +368,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Cardio</h5>John Deo
                                 </td>
                                 <td></td>
@@ -387,7 +387,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Cardio</h5>John Deo
                                 </td>
                                 <td></td>
@@ -398,7 +398,7 @@ url({{asset('assets/images/bg.jpg')}});">
                             <tr>
                                 <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Cardio</h5>John Deo
                                 </td>
                                 <td></td>
@@ -437,7 +437,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Cardio</h5>John Deo
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
@@ -460,14 +460,14 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Cardio</h5>John Deo
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
@@ -479,7 +479,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Cardio</h5>John Deo
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Crossfit</h5>Adam Phillips
                                 </td>
                             </tr>
@@ -490,7 +490,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Cardio</h5>John Deo
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
@@ -529,7 +529,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
@@ -540,7 +540,7 @@ url({{asset('assets/images/bg.jpg')}});">
                             <tr>
                                 <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
@@ -559,7 +559,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
@@ -582,7 +582,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <h5>Crossfit</h5>Adam Phillips
                                 </td>
                                 <td></td>
-                                <td class="bg-primary text-white">
+                                <td class="bg-info text-white">
                                     <h5 class="text-white">Power Lifting</h5>James Alien
                                 </td>
                                 <td></td>
@@ -615,7 +615,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-1.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-primary">Client Name</h4>
+                                        <h4 class="text-info">Client Name</h4>
                                         <p class="m-0">Profession</p>
                                     </div>
                                 </div>
@@ -629,7 +629,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-2.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-primary">Client Name</h4>
+                                        <h4 class="text-info">Client Name</h4>
                                         <p class="m-0">Profession</p>
                                     </div>
                                 </div>
@@ -643,7 +643,7 @@ url({{asset('assets/images/bg.jpg')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-3.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-primary">Client Name</h4>
+                                        <h4 class="text-info">Client Name</h4>
                                         <p class="m-0">Profession</p>
                                     </div>
                                 </div>
@@ -658,7 +658,7 @@ url({{asset('assets/images/bg.jpg')}});">
             </div>
             <div class="col-md-6">
                 <div class="pl-md-3 d-none d-md-block">
-                    <h4 class="text-primary">Testimonial</h4>
+                    <h4 class="text-info">Testimonial</h4>
                     <h4 class="display-4 mb-4 text-white font-weight-bold">Client Feedback</h4>
                     <p class="m-0 text-white">See what our satisfied clients say after trying our products...</p>
                 </div>
@@ -672,14 +672,14 @@ url({{asset('assets/images/bg.jpg')}});">
 <!-- Blog Start -->
 <div class="container pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Our Blog</h4>
+        <h4 class="text-info font-weight-bold">Our Blog</h4>
         <h4 class="display-4 font-weight-bold">Latest Article From Blog</h4>
     </div>
     <div class="row">
         <div class="col-lg-6 mb-5 blog-item">
             <img class="img-fluid mb-4" src="{{asset('assets/images/blog-1.jpg')}}" alt="Image">
             <div class="d-flex align-items-center mb-4">
-                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white"
+                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-info text-white"
                     style="width: 80px; height: 80px;">
                     <small>01</small>
                     <strong class="text-uppercase m-0 text-white">Jan</strong>
@@ -697,12 +697,12 @@ url({{asset('assets/images/bg.jpg')}});">
             <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos,
                 sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod
                 vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-primary mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-outline-info mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
         </div>
         <div class="col-lg-6 mb-5 blog-item">
             <img class="img-fluid mb-4" src="{{asset('assets/images/blog-2.jpg')}}" alt="Image">
             <div class="d-flex align-items-center mb-4">
-                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white"
+                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-info text-white"
                     style="width: 80px; height: 80px;">
                     <small>01</small>
                     <strong class="text-uppercase m-0 text-white">Jan</strong>
@@ -720,7 +720,7 @@ url({{asset('assets/images/bg.jpg')}});">
             <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos,
                 sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod
                 vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-primary mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-outline-info mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </div>

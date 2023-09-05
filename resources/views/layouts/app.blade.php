@@ -15,6 +15,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('assets/css/style.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 </head>
 
 <body>

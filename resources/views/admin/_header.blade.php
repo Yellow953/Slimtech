@@ -34,7 +34,7 @@
 
         <!-- profile info & task notification -->
         <div class="col-6 clearfix p-0">
-            <div class="user-profile pull-right m-0 border">
+            <div class="user-profile pull-right m-0 border bg-primary">
                 <img class="avatar user-thumb" src="{{asset('assets/images/default_profile.png')}}" alt="avatar">
                 <h4 class="user-name dropdown-toggle text-dark" data-toggle="dropdown">{{ ucwords(Auth::user()->name)
                     }}<i class="fa fa-angle-down"></i></h4>

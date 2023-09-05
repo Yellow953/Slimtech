@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <div class="navbar-nav ml-auto p-4 bg-secondary">
+            <div class="navbar-nav ml-auto p-4 bg-secondary border-rounded">
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="/about" class="nav-item nav-link">About Us</a>
                 <a href="/shop" class="nav-item nav-link">Shop</a>

@@ -2,65 +2,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{asset('assets/css/cart.css')}}">
-
-<div class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                <div class="full">
-                    <div class="center-desk">
-                        <div class="logo">
-                            <a href="/"><img src="{{asset('assets/images/logo.png')}}" class="logo_cart" alt="#" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                <nav class="navigation navbar navbar-expand-md navbar-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse custom_header_bg" id="navbarsExample04">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="/"> Home </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="/#about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="/shop">Shop</a>
-                            </li>
-                            @auth
-                            <li class="nav-item">
-                                <a href="/profile" class="nav-link text-dark">
-                                    Profile
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/logout" class="nav-link text-dark">
-                                    Logout
-                                </a>
-                            </li>
-                            @endauth
-                        </ul>
-                        @if(auth()->user())
-                        @if (auth()->user()->role == 'admin')
-                        <div class="sign_btn"><a href="/app">App</a></div>
-                        @else
-                        <div class="sign_btn"><a href="/cart">Cart ({{Helper::cart_count()}})</a></div>
-                        @endif
-                        @else
-                        <div class="sign_btn"><a href="/login">Sign in</a></div>
-                        @endif
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
+@include('layouts._header')
 
 <br><br><br>
 

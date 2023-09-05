@@ -1,10 +1,10 @@
 <!-- sidebar menu area start -->
-<div class="sidebar-menu">
-    <div class="sidebar-header py-1">
+<div class="sidebar-menu bg-primary">
+    <div class="sidebar-header py-1 bg-primary">
         <div class="logo">
             <a href="/app">
                 <h1 class="my-3 mx-auto text-dark">SlimTech</h1>
-                {{-- <img src="{{asset('assets/images/logo.png')}}" alt="logo" class="my-auto logo-app mx-4"> --}}
+                {{-- <img src="{{asset('assets/images/logo.png')}}" alt="logo" class="my-auto"> --}}
             </a>
         </div>
     </div>

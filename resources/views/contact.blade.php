@@ -22,24 +22,32 @@ url({{asset('assets/images/bg.jpg')}});">
 <!-- Contact Start -->
 <div class="container pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-primary font-weight-bold">Get In Touch</h4>
+        <h4 class="text-info font-weight-bold">Get In Touch</h4>
         <h4 class="display-4 font-weight-bold">Contact Us For More Informations</h4>
     </div>
     <div class="row px-3 pb-2">
-        <div class="col-sm-4 text-center mb-3">
-            <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
+        <div class="col-sm-3 text-center mb-3">
+            <i class="fa fa-2x fa-map-marker-alt mb-3 text-info"></i>
             <h4 class="font-weight-bold">Address</h4>
             <p>123 Street, Beirut, Lebanon</p>
         </div>
-        <div class="col-sm-4 text-center mb-3">
-            <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
+        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='tel:96176656054'" style="cursor: pointer;"
+            title="Click to Call">
+            <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
             <h4 class="font-weight-bold">Phone</h4>
-            <p>+012 345 6789</p>
+            <p>+961 76 656 054</p>
         </div>
-        <div class="col-sm-4 text-center mb-3">
-            <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
+        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='mailto:info@slimtech.com'"
+            title="Click to Email">
+            <i class="far fa-2x fa-envelope mb-3 text-info"></i>
             <h4 class="font-weight-bold">Email</h4>
-            <p>info@example.com</p>
+            <p>info@slimtech.com</p>
+        </div>
+        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='
+            https://api.whatsapp.com/send/?phone=96176656054'" target="_blank" title="Click to Whatsapp">
+            <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Whatsapp</h4>
+            <p>+961 76 656 054</p>
         </div>
     </div>
     <div class="row">

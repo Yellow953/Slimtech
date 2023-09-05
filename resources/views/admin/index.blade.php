@@ -7,20 +7,20 @@
     </div>
 
     <div class="card card-body m-3 mx-md-4 mt-n6">
-        <h1 class="text-center">SlimTech</h1>
+        <h1 class="text-center text-primary">SlimTech</h1>
         <div class="row my-3">
             <div class="col-md-3">
                 <img src="{{asset('/assets/images/logo.png')}}" alt="" class="rounded img-responsive w-100 h-auto">
             </div>
             <div class="col-md-9">
                 <p class="my-3">
-                    Welcome to the special shop, where we curate a unique collection of items from around the world! Our
-                    mission is to bring you a variety of special products that you won't find anywhere else. From
-                    kitchen to bar accessories, special gadgets and tools to solve daily problems with a limited edition
-                    collectibles, we ensure that every item in our shop is special and carefully selected for its
-                    distinctiveness. Whether you're a collector, an adventurer, or simply someone who appreciates the
-                    extraordinary, we offer a one-of-a-kind shopping experience just for you. So come on in and let us
-                    surprise you with the wonders of the world!
+                    Welcome to SlimTech, your one-stop destination for cutting-edge fitness equipment and apparel. At
+                    SlimTech, we're dedicated to helping you achieve your fitness goals by providing top-quality EMS
+                    suits and a wide range of gym products. Whether you're a seasoned athlete or just starting your
+                    fitness journey, our products are designed to enhance your workouts and elevate your performance.
+                    Our mission is to empower you with the tools and gear you need to unlock your full potential and
+                    lead a healthier, more active lifestyle. Explore our collection and experience the future of fitness
+                    with SlimTech.
                 </p>
             </div>
         </div>

@@ -23,6 +23,13 @@
     <link rel="stylesheet" href="{{asset('admin/css/responsive.css')}}">
     <!-- modernizr css -->
     <script src="{{asset('admin/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+    <style>
+        .login-area {
+            background: url('{{asset("assets/images/bg.jpg")}}') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,10 +37,10 @@
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
-                <form method="POST" action="{{ route('login') }}" class="login-form">
+                <form method="POST" action="{{ route('login') }}" class="login-form" style="background: transparent">
                     @csrf
                     <div class="login-form-head"
-                        style="border-radius: 25px 25px 0 0; border: 1px black solid; border-bottom: none;0">
+                        style="border-radius: 25px 25px 0 0; border: 1px black solid; border-bottom: none;">
                         <h4>Login</h4>
                     </div>
                     <div class="login-form-body bg-white"
