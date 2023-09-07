@@ -36,7 +36,7 @@
     <!-- login area start -->
     <div class="login-area">
         <div class="container">
-            <a href="/" class="nav-link text-dark pt-4">
+            <a href="/" class="nav-link text-white pt-4">
                 <h4>
                     < Home </h4>
             </a>

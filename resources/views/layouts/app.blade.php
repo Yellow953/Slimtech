@@ -10,6 +10,8 @@
 
     <title>{{ config('app.name', 'SlimTech') }}</title>
 
+    <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}" type="image/x-icon">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 

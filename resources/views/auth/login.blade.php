@@ -6,7 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Login - SlimTech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="{{asset('admin/images/icon/favicon.ico')}}">
+
+    <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}" type="image/x-icon">
+
     <link rel="stylesheet" href="{{asset('admin/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('admin/css/themify-icons.css')}}">

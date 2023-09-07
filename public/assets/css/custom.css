@@ -104,3 +104,9 @@
 .image-wrapper:hover .delete-overlay {
     opacity: 1;
 }
+
+.svg-icon {
+    margin-right: 25px;
+    width: 100px;
+    height: 100px;
+}

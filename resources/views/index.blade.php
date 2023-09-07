@@ -125,30 +125,36 @@
     <div class="row">
         <div class="col-lg-4 p-0">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
-                <i class="flaticon-training display-3 text-info mr-3"></i>
+                <img src="{{asset('assets/images/affordable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Progression</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
+                    <h2 class="text-white mb-3">Affordable</h2>
+                    <p>
+                        You can commence your EMS training without breaking the bank. Begin today by either renting or
+                        purchasing our EMS Suit!
                     </p>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 p-0">
             <div class="d-flex align-items-center bg-info text-white px-5" style="min-height: 300px;">
-                <i class="flaticon-weightlifting display-3 text-secondary mr-3"></i>
+                <img src="{{asset('assets/images/comfortable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Workout</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
+                    <h2 class="text-white mb-3">Confortable</h2>
+                    <p>
+                        SlimTech is dedicated to providing comfortable EMS workouts. Our suits deliver gentle, pain-free
+                        pulses, ensuring a bruise-free experience. Enjoy smooth and pleasant fitness sessions with us.
                     </p>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 p-0">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
-                <i class="flaticon-treadmill display-3 text-info mr-3"></i>
+                <img src="{{asset('assets/images/support.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Nutrition</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci velit id libero
+                    <h2 class="text-white mb-3">Support</h2>
+                    <p>
+                        We get your maintenance and service concerns, as we've been there too. Count on our top-notch
+                        service and customer care. You can also work out at our facilities.
                     </p>
                 </div>
             </div>
@@ -161,7 +167,7 @@
 <!-- GYM Feature Start -->
 <div class="container feature pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-info font-weight-bold">Why Do you need an EMS suit?</h4>
+        <h4 class="text-info font-weight-bold">Why Do you need an EMS Suit?</h4>
         <h4 class="display-4 font-weight-bold">Benifits of EMS Suits</h4>
     </div>
     <div class="row">
@@ -220,24 +226,6 @@
     </div>
 </div>
 <!-- GYM Feature End -->
-
-
-{{--
-<!-- Subscribe Start -->
-<div class="subscribe container-fluid my-5 py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url({{asset('assets/images/bg.jpg')}});">
-    <h4 class="display-4 text-white font-weight-bold mt-5 mb-3">Subscribe Our Newsletter</h4>
-    <p class="text-white mb-4">Subscribe and get Our latest article in your inbox</p>
-    <form class="form-inline justify-content-center mb-5">
-        <div class="input-group">
-            <input type="text" class="form-control-lg" placeholder="Your Email">
-            <div class="input-group-append">
-                <button class="btn btn-info" type="submit">Subscribe</button>
-            </div>
-        </div>
-    </form>
-</div>
-<!-- Subscribe End --> --}}
 
 <!-- Testimonial Start -->
 <div class="container-fluid position-relative testimonial my-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
