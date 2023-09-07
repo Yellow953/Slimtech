@@ -40,6 +40,8 @@ class RegisterController extends Controller
             'role' => 'user',
             'phone' => $data['phone'],
             'address' => $data['address'],
+            'medical_condition' => $data['medical_condition'],
+            'agreed' => isset($data['agreed']) ? 1 : 0,
         ]);
     }
 }

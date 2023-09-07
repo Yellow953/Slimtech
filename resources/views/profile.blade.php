@@ -89,6 +89,18 @@
                             </span>
                             @enderror
                         </div>
+                        <div class="form-gp">
+                            <label for="medical_condition">Medical Condition</label>
+                            <textarea name="medical_condition" id="medical_condition" rows="5"
+                                placeholder="Please describe your medical condition if you have any!"
+                                class="form-control input-rounded">{{auth()->user()->medical_condition}}</textarea>
+                            @error('medical_condition')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit" class="bg-primary text-white">Update Profile <i
                                     class="ti-arrow-right"></i></button>

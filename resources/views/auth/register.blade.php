@@ -29,6 +29,11 @@
             background: url('{{asset("assets/images/bg.jpg")}}') no-repeat center center fixed;
             background-size: cover;
         }
+
+        .custom-font-1 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 
@@ -113,6 +118,26 @@
                             </span>
                             @enderror
                         </div>
+                        <div class="form-gp">
+                            <label for="medical_condition">Medical Condition</label>
+                            <textarea name="medical_condition" id="medical_condition" rows="5"
+                                placeholder="Please describe your medical condition if you have any!"
+                                class="form-control"></textarea>
+                            @error('medical_condition')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="d-flex justify-content-end my-3">
+                            <a href="#" class="my-auto" data-toggle="modal" data-target="#termsandconditions">Terms and
+                                Conditions</a>
+                            <input type="checkbox" name="agreed" id="agreed" title="agree" class=" my-auto mx-1"
+                                required>
+                            <label for="agreed" class="my-auto">agree</label>
+                        </div>
+
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit" class="bg-primary text-white">Register <i
                                     class="ti-arrow-right"></i></button>
@@ -126,6 +151,116 @@
         </div>
     </div>
     <!-- login area end -->
+
+    <div class="modal fade" id="termsandconditions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body py-0 px-4">
+                    <h2 class="custom-font my-4 text-center">{{ucwords('terms and conditions')}}</h2>
+
+                    <ol class="mx-4">
+                        <p>These Terms and Conditions ("Terms") govern your use of the website, products, and services
+                            ("Services") provided by Slimtech ("we," "our," or "us"). By accessing or using our website
+                            and
+                            purchasing our EMS suits and gym products, you agree to comply with and be bound by these
+                            Terms.
+                            Please read them carefully before using our Services.</p><br>
+
+                        <li class="custom-font-1">
+                            Acceptance of Terms
+                        </li>
+                        <p>By using our Services, you acknowledge that you have read, understood, and agree to these
+                            Terms.
+                            If you do not agree with these Terms, please do not use our Services.</p> <br>
+
+                        <li class="custom-font-1">
+                            Use of Services
+                        </li>
+                        <ul>
+                            <li>You can use our EMS suits according to our provided instructions and regulations.</li>
+                            <li>You do not have any underlying medical conditions or diseases that could contraindicate
+                                the
+                                use of our EMS suits. It is your responsibility to ensure that you are in suitable
+                                physical
+                                condition for using our products.</li>
+                            <li>You will provide accurate and complete data and information when using our Services,
+                                including any personal information required for the purchase and use of our products.
+                            </li>
+                        </ul>
+                        <p>By using our Services in compliance with the above conditions, you acknowledge your
+                            responsibility for the safe and appropriate use of our EMS suits. If you have any concerns
+                            about
+                            your health or suitability for using our products, we recommend consulting with a healthcare
+                            professional before use.</p><br>
+
+                        <li class="custom-font-1">
+                            Product Information
+                        </li>
+                        <p>We strive to provide accurate and up-to-date information about our EMS suits and gym
+                            products,
+                            including descriptions, prices, and availability. However, we do not warrant that product
+                            descriptions or other content on our website are error-free. We reserve the right to correct
+                            any
+                            errors, inaccuracies, or omissions and to change or update information at any time.</p><br>
+
+                        <li class="custom-font-1">
+                            Ordering and Payment
+                        </li>
+                        <p>When you place an order through our website, you agree to provide accurate and complete
+                            information. You are responsible for ensuring the accuracy of your order and payment
+                            details. We
+                            accept various payment methods, and by placing an order, you authorize us to charge the
+                            provided
+                            payment method for the total amount of your order.</p><br>
+
+                        <li class="custom-font-1">
+                            Intellectual Property
+                        </li>
+                        <p>All content on our website, including text, images, logos, and graphics, is protected by
+                            copyright and other intellectual property laws. You may not use, reproduce, or distribute
+                            our
+                            content without our express written consent.</p><br>
+
+                        <li class="custom-font-1">
+                            Limitation of Liability
+                        </li>
+                        <p>We are not liable for any direct, indirect, incidental, special, or consequential damages
+                            arising
+                            from your use of our Services or the purchase of our products. In no event shall our total
+                            liability exceed the amount you paid for the specific product giving rise to the claim.</p>
+                        <br>
+
+                        <li class="custom-font-1">
+                            Indemnification
+                        </li>
+                        <p>You agree to indemnify and hold us harmless from any claims, losses, liabilities, expenses,
+                            or
+                            damages arising out of your use of our Services, violation of these Terms, or infringement
+                            of
+                            any third-party rights.</p><br>
+
+                        <li class="custom-font-1">
+                            Contact Us
+                        </li>
+                        <p>If you have any questions or concerns about these Terms or our Services, please contact us at
+                            +961 76 656 054.</p><br>
+                    </ol><br>
+
+                    <p>By using our Services, you agree to these Terms and our policies. Thank you for choosing Slimtech
+                        for your EMS suits and gym products needs.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jquery latest version -->
     <script src="{{asset('admin/js/vendor/jquery-2.2.4.min.js')}}"></script>

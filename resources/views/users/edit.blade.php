@@ -19,6 +19,12 @@
                 <label for="address" class="col-form-label">Address</label>
                 <input class="form-control input-rounded" name="address" value="{{$user->address}}" type="text">
             </div>
+            <div class="form-group">
+                <label for="medical_condition" class="col-form-label">Medical Condition</label>
+                <textarea name="medical_condition" id="medical_condition" rows="5"
+                    placeholder="Please describe your medical condition if you have any!"
+                    class="form-control input-rounded">{{$user->medical_condition}}</textarea>
+            </div>
 
             <div class="w-100 d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary btn-rounded">Update</button>

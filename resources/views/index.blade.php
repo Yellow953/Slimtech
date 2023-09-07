@@ -73,24 +73,46 @@
 <!-- About Start -->
 <div class="container py-5">
     <div class="row align-items-center">
-        <div class="col-lg-6">
-            <img class="img-fluid mb-4 mb-lg-0" src="{{asset('assets/images/about.jpg')}}" alt="Image">
+        <div class="col-lg-4">
+            <img class="img-fluid mb-4 mb-lg-0" src="{{asset('assets/images/logo.png')}}" alt="Image">
         </div>
-        <div class="col-lg-6">
-            <h2 class="display-4 font-weight-bold mb-4">10 Years Experience</h2>
-            <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
-            <div class="row py-2">
+        <div class="col-lg-8">
+            <h2 class="display-4 font-weight-bold mb-4">Who Are We?</h2>
+            <p>
+                Welcome to SlimTech, your one-stop destination for cutting-edge fitness equipment and apparel. At
+                SlimTech, we're dedicated to helping you achieve your fitness goals by providing top-quality EMS suits
+                and a wide range of gym products. Whether you're a seasoned athlete or just starting your fitness
+                journey, our products are designed to enhance your workouts and elevate your performance. Our mission is
+                to empower you with the tools and gear you need to unlock your full potential and lead a healthier, more
+                active lifestyle. Explore our collection and experience the future of fitness with SlimTech.
+            </p>
+            <div class="row py-2 my-3">
                 <div class="col-sm-6">
-                    <i class="flaticon-barbell display-2 text-info"></i>
-                    <h4 class="font-weight-bold">Certified GYM Center</h4>
-                    <p>Ipsum sanctu dolor ipsum dolore sit et kasd duo</p>
+                    <div class="d-flex">
+                        <div class="my-auto mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
+                                class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-weight-bold my-auto">Certified EMS Provider</h4>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                    <i class="flaticon-medal display-2 text-info"></i>
-                    <h4 class="font-weight-bold">Award Winning</h4>
-                    <p>Ipsum sanctu dolor ipsum dolore sit et kasd duo</p>
+                    <div class="d-flex">
+                        <div class="my-auto mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
+                                class="bi bi-stars" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-weight-bold my-auto">Over 15 Years Experience</h4>
+                    </div>
                 </div>
             </div>
+
             <a href="" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
         </div>
     </div>
@@ -139,8 +161,8 @@
 <!-- GYM Feature Start -->
 <div class="container feature pt-5">
     <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-info font-weight-bold">Why Choose Us?</h4>
-        <h4 class="display-4 font-weight-bold">Benifits of Joining Our GYM</h4>
+        <h4 class="text-info font-weight-bold">Why Do you need an EMS suit?</h4>
+        <h4 class="display-4 font-weight-bold">Benifits of EMS Suits</h4>
     </div>
     <div class="row">
         <div class="col-md-6 mb-5">
@@ -200,6 +222,7 @@
 <!-- GYM Feature End -->
 
 
+{{--
 <!-- Subscribe Start -->
 <div class="subscribe container-fluid my-5 py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
 url({{asset('assets/images/bg.jpg')}});">
@@ -214,8 +237,79 @@ url({{asset('assets/images/bg.jpg')}});">
         </div>
     </form>
 </div>
-<!-- Subscribe End -->
+<!-- Subscribe End --> --}}
 
+<!-- Testimonial Start -->
+<div class="container-fluid position-relative testimonial my-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+url({{asset('assets/images/bg.jpg')}});">
+    <div class="container">
+        <div class="row px-3 align-items-center">
+            <div class="col-md-6 bg-secondary">
+                <div class="d-flex align-items-center px-3" style="min-height: 450px;">
+                    <div id="carouselId" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselId" data-slide-to="1"></li>
+                            <li data-target="#carouselId" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="d-flex align-items-center mb-4 text-white">
+                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
+                                        src="{{asset('assets/images/testimonial-1.jpg')}}" alt="Image">
+                                    <div class="pl-4">
+                                        <h4 class="text-info">Client Name</h4>
+                                        <p class="m-0">Profession</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
+                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex align-items-center mb-4 text-white">
+                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
+                                        src="{{asset('assets/images/testimonial-2.jpg')}}" alt="Image">
+                                    <div class="pl-4">
+                                        <h4 class="text-info">Client Name</h4>
+                                        <p class="m-0">Profession</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
+                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex align-items-center mb-4 text-white">
+                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
+                                        src="{{asset('assets/images/testimonial-3.jpg')}}" alt="Image">
+                                    <div class="pl-4">
+                                        <h4 class="text-info">Client Name</h4>
+                                        <p class="m-0">Profession</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
+                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="pl-md-3 d-none d-md-block">
+                    <h4 class="text-info">Testimonial</h4>
+                    <h4 class="display-4 mb-4 text-white font-weight-bold">Client Feedback</h4>
+                    <p class="m-0 text-white">See what our satisfied clients say after trying our products...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
 
 <!-- Class Timetable Start -->
 <div class="container gym-feature py-5">
@@ -595,136 +689,6 @@ url({{asset('assets/images/bg.jpg')}});">
     </div>
 </div>
 <!-- Class Timetable End -->
-
-<!-- Testimonial Start -->
-<div class="container-fluid position-relative testimonial my-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url({{asset('assets/images/bg.jpg')}});">
-    <div class="container">
-        <div class="row px-3 align-items-center">
-            <div class="col-md-6 bg-secondary">
-                <div class="d-flex align-items-center px-3" style="min-height: 450px;">
-                    <div id="carouselId" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselId" data-slide-to="1"></li>
-                            <li data-target="#carouselId" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="d-flex align-items-center mb-4 text-white">
-                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
-                                        src="{{asset('assets/images/testimonial-1.jpg')}}" alt="Image">
-                                    <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center mb-4 text-white">
-                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
-                                        src="{{asset('assets/images/testimonial-2.jpg')}}" alt="Image">
-                                    <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center mb-4 text-white">
-                                    <img width="80" height="80" class="rounded-circle bg-dark p-2"
-                                        src="{{asset('assets/images/testimonial-3.jpg')}}" alt="Image">
-                                    <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pl-md-3 d-none d-md-block">
-                    <h4 class="text-info">Testimonial</h4>
-                    <h4 class="display-4 mb-4 text-white font-weight-bold">Client Feedback</h4>
-                    <p class="m-0 text-white">See what our satisfied clients say after trying our products...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-
-
-<!-- Blog Start -->
-<div class="container pt-5">
-    <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-info font-weight-bold">Our Blog</h4>
-        <h4 class="display-4 font-weight-bold">Latest Article From Blog</h4>
-    </div>
-    <div class="row">
-        <div class="col-lg-6 mb-5 blog-item">
-            <img class="img-fluid mb-4" src="{{asset('assets/images/blog-1.jpg')}}" alt="Image">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-info text-white"
-                    style="width: 80px; height: 80px;">
-                    <small>01</small>
-                    <strong class="text-uppercase m-0 text-white">Jan</strong>
-                    <small>2045</small>
-                </div>
-                <div class="pl-3">
-                    <h3 class="font-weight-bold">Lorem ipsum dolor sit amet</h3>
-                    <div class="d-flex">
-                        <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
-                    </div>
-                </div>
-            </div>
-            <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos,
-                sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod
-                vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-info mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
-        </div>
-        <div class="col-lg-6 mb-5 blog-item">
-            <img class="img-fluid mb-4" src="{{asset('assets/images/blog-2.jpg')}}" alt="Image">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-info text-white"
-                    style="width: 80px; height: 80px;">
-                    <small>01</small>
-                    <strong class="text-uppercase m-0 text-white">Jan</strong>
-                    <small>2045</small>
-                </div>
-                <div class="pl-3">
-                    <h3 class="font-weight-bold">Lorem ipsum dolor sit amet</h3>
-                    <div class="d-flex">
-                        <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
-                        <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
-                    </div>
-                </div>
-            </div>
-            <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos,
-                sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod
-                vero dolor sed kasd accusam</p>
-            <a class="btn btn-outline-info mt-2 px-3" href="">Read More <i class="fa fa-angle-right"></i></a>
-        </div>
-    </div>
-</div>
-<!-- Blog End -->
 
 @include('layouts._footer')
 

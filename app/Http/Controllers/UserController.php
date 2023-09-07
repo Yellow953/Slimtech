@@ -28,9 +28,9 @@ class UserController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required'
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|min:6|confirmed|max:255',
         ]);
 
         if ($request->password == $request->password_confirmation) {
@@ -41,6 +41,7 @@ class UserController extends Controller
             $user->password = Hash::make($request->password);
             $user->phone = $request->phone;
             $user->address = $request->address;
+            $user->medical_condition = $request->medical_condition;
 
             $text = "User " . $request->name . " created, datetime: " . now();
             Log::create(['text' => $text]);
@@ -64,6 +65,7 @@ class UserController extends Controller
 
         $user->phone = $request->phone;
         $user->address = $request->address;
+        $user->medical_condition = $request->medical_condition;
 
         $user->save();
 
