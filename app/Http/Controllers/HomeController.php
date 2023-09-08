@@ -42,16 +42,11 @@ class HomeController extends Controller
 
     public function shop()
     {
-        $categories = Category::select('name')->get();
+        $ems = Product::where('category_id', 1)->get();
+        $products = Product::where('category_id', 2)->get();
+        $services = Product::where('category_id', 3)->get();
 
-        $search = request()->query('search');
-        if ($search) {
-            $products = Product::where('quantity', '!=', 0)->where('category_id', $search)->get();
-        } else {
-            $products = Product::where('quantity', '!=', 0)->get();
-        }
-
-        $data = compact('categories', 'products');
+        $data = compact('ems', 'products', 'services');
         return view('shop', $data);
     }
 

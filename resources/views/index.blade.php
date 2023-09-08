@@ -11,19 +11,20 @@
             <div class="carousel-item active">
                 <img class="w-100" src="{{asset('assets/images/carousel-1.jpg')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <h3 class="text-info text-capitalize m-0">Gym & Fitness Center</h3>
-                    <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Best Gym In
-                        Town</h2>
-                    <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
+                    <h3 class="text-info text-capitalize m-0">Your Fitness Partner</h3>
+                    <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">
+                        EMS Suits & Gym Products</h2>
+                    <a href="/shop" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Explore Our
+                        Products</a>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="w-100" src="{{asset('assets/images/carousel-2.jpg')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <h3 class="text-info text-capitalize m-0">Gym & Fitness Center</h3>
-                    <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Get Body In
-                        Shape</h2>
-                    <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
+                    <h3 class="text-info text-capitalize m-0">Achieve Your Fitness Goals</h3>
+                    <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">EMS Suits,
+                        Gym Equipment...</h2>
+                    <a href="/shop" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
                 </div>
             </div>
         </div>
@@ -38,6 +39,7 @@
 <!-- Carousel End -->
 
 
+
 <!-- Gym Class Start -->
 <div class="container gym-class mb-5">
     <div class="row px-3">
@@ -45,24 +47,29 @@
             <div
                 class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-info text-right text-white py-5 px-5">
                 <i class="flaticon-six-pack"></i>
-                <h3 class="display-4 mb-3 text-white font-weight-bold">Body Building</h3>
+                <h3 class="display-4 mb-3 text-white font-weight-bold">EMS Provider</h3>
                 <p>
-                    Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor
-                    sit eos sea sanctus erat lorem nonumy sanctus takimata. Kasd amet sit sadipscing at..
+                    Experience a revolution in fitness with our state-of-the-art EMS suits. We offer
+                    cutting-edge technology that maximizes workout efficiency, saves you time, and delivers personalized
+                    training. Our EMS suits are not just about achieving your fitness goals; they're also about faster
+                    recovery and relaxation.
                 </p>
-                <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
+                <a href="#" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
             </div>
         </div>
         <div class="col-md-6 p-0">
             <div
                 class="gym-class-box d-flex flex-column align-items-start justify-content-center bg-secondary text-left text-white py-5 px-5">
                 <i class="flaticon-bodybuilding"></i>
-                <h3 class="display-4 mb-3 text-white font-weight-bold">Muscle Building</h3>
+                <h3 class="display-4 mb-3 text-white font-weight-bold">Training Center</h3>
                 <p>
-                    Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor
-                    sit eos sea sanctus erat lorem nonumy sanctus takimata. Kasd amet sit sadipscing at..
+                    We also offer our training center space for
+                    personalized sessions and workouts, expert guidance, and achieving your fitness aspirations. Whether
+                    you're a
+                    beginner or an experienced athlete, our certified trainers and specialized equipment are there
+                    to help you reach your fitness goals. You can also rent an EMS suit and train here...
                 </p>
-                <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
+                <a href="#" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
             </div>
         </div>
     </div>
@@ -113,7 +120,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
+            <a href="#" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
         </div>
     </div>
 </div>
@@ -174,26 +181,31 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-1.jpg')}}" alt="Image">
-                    <i class="flaticon-barbell"></i>
+                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-2.jpg')}}" alt="Image">
                 </div>
                 <div class="col-sm-7">
-                    <h4 class="font-weight-bold">Videos Instruction</h4>
-                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                        invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    <h4 class="font-weight-bold">Efficient Muscle Activation</h4>
+                    <p>
+                        EMS technology can simultaneously target multiple muscle groups, making it an efficient way to
+                        activate and engage your muscles. This can help you achieve a more effective workout in less
+                        time compared to traditional exercise routines.
+                    </p>
                 </div>
             </div>
         </div>
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-2.jpg')}}" alt="Image">
-                    <i class="flaticon-training"></i>
+                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-1.jpg')}}" alt="Image">
                 </div>
                 <div class="col-sm-7">
-                    <h4 class="font-weight-bold">Training Calendar</h4>
-                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                        invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    <h4 class="font-weight-bold">Time-Saving</h4>
+                    <p>
+                        With an EMS suit, you can get a full-body workout in a shorter amount of time. This is
+                        especially appealing for individuals with busy schedules who struggle to find time for lengthy
+                        gym sessions. EMS can be a time-efficient alternative for maintaining or improving muscle tone
+                        and strength.
+                    </p>
                 </div>
             </div>
         </div>
@@ -201,12 +213,14 @@
             <div class="row align-items-center">
                 <div class="col-sm-5">
                     <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-3.jpg')}}" alt="Image">
-                    <i class="flaticon-trends"></i>
                 </div>
                 <div class="col-sm-7">
-                    <h4 class="font-weight-bold">Free Apps & WiFi</h4>
-                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                        invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    <h4 class="font-weight-bold">Muscle Recovery</h4>
+                    <p>
+                        EMS technology is not only for workouts but can also aid in muscle recovery. Many EMS devices
+                        offer programs designed specifically for recovery and relaxation, helping to reduce muscle
+                        soreness and stiffness after intense physical activity.
+                    </p>
                 </div>
             </div>
         </div>
@@ -214,12 +228,15 @@
             <div class="row align-items-center">
                 <div class="col-sm-5">
                     <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}" alt="Image">
-                    <i class="flaticon-support"></i>
                 </div>
                 <div class="col-sm-7">
-                    <h4 class="font-weight-bold">Community Support</h4>
-                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                        invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    <h4 class="font-weight-bold">Customized Training</h4>
+                    <p>
+                        Some EMS suits come with mobile apps or control panels that allow you to customize your workout
+                        intensity and target specific muscle groups. This level of personalization can help you tailor
+                        your training to your fitness goals, whether it's muscle building, fat loss, or improved
+                        endurance.
+                    </p>
                 </div>
             </div>
         </div>
