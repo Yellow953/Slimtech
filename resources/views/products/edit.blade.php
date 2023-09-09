@@ -25,6 +25,11 @@
                 <input class="form-control input-rounded" name="sell_price" required type="number" step="0.01"
                     value="{{$product->sell_price}}">
             </div>
+            <div class="form-group">
+                <label for="rent_price" class="col-form-label">Rent Price</label>
+                <input class="form-control input-rounded" name="rent_price" type="number" step="0.01"
+                    value="{{$product->rent_price}}">
+            </div>
 
             <div class="form-group">
                 <label for="category_id" class="col-form-label">Category *</label>

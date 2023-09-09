@@ -17,8 +17,12 @@
             </div>
 
             <div class="form-group">
+                <label for="rented_at" class="col-form-label">Rent At *</label>
+                <input class="form-control input-rounded" name="rented_at" required type="datetime">
+            </div>
+            <div class="form-group">
                 <label for="rented_untill" class="col-form-label">Rent Untill *</label>
-                <input class="form-control input-rounded" name="rented_untill" required type="date">
+                <input class="form-control input-rounded" name="rented_untill" required type="dateime">
             </div>
 
             <div class="w-100 d-flex justify-content-end">

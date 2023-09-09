@@ -13,12 +13,9 @@ return new class extends Migration {
             $table->double('quantity')->default(0);
             $table->double('buy_price')->unsigned()->default(0);
             $table->double('sell_price')->unsigned()->default(0);
+            $table->double('rent_price')->unsigned()->nullable();
             $table->text('description')->nullable();
             $table->string('image')->default('assets/images/no_img.png');
-
-            $table->string('status')->default('available');
-            $table->date('rented_untill')->nullable();
-
             $table->bigInteger("category_id")->unsigned();
             $table->timestamps();
 

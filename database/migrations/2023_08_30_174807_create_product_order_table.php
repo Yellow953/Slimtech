@@ -13,7 +13,8 @@ return new class extends Migration {
             $table->bigInteger('order_id')->unsigned();
             $table->double('quantity')->default(1);
             $table->string('type')->default('buy');
-            $table->date('rented_untill')->nullable();
+            $table->datetime('rented_at')->nullable();
+            $table->datetime('rented_untill')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');

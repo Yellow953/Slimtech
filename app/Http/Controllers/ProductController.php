@@ -8,6 +8,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -47,14 +48,9 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->buy_price = $request->buy_price;
         $product->sell_price = $request->sell_price;
+        $product->rent_price = $request->rent_price;
         $product->category_id = $request->category_id;
         $product->description = $request->description;
-
-        if ($request->is_bundle) {
-            $product->is_bundle = true;
-        } else {
-            $product->is_bundle = false;
-        }
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -95,6 +91,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->buy_price = $request->buy_price;
         $product->sell_price = $request->sell_price;
+        $product->rent_price = $request->rent_price;
         $product->description = $request->description;
 
         if ($request->hasFile('image')) {
@@ -112,6 +109,7 @@ class ProductController extends Controller
         if ($request->category_id) {
             $product->category_id = $request->category_id;
         }
+
         $text = "Product " . $product->name . " updated, datetime: " . now();
         $product->save();
         Log::create(['text' => $text]);
@@ -188,6 +186,20 @@ class ProductController extends Controller
 
         $product->save();
         return redirect('/products')->with('success', 'Product was successfully imported.');
+    }
+
+    public function rented($id)
+    {
+        $rentedItems = DB::table('product_order')
+            ->where('type', 'rent')
+            ->get();
+
+        return view('products.rented', compact('rentedItems'));
+    }
+
+    public function return ($id)
+    {
+
     }
 
 }

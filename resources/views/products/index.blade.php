@@ -23,6 +23,7 @@
                                     <th>Quantity</th>
                                     <th>Buy Price</th>
                                     <th>Sell Price</th>
+                                    <th>Rent Price</th>
                                     <th>Profit</th>
                                     <th>Description</th>
                                     @if (Auth::user()->role == "admin")
@@ -41,17 +42,24 @@
                                         {{number_format($product->quantity, 2)}}
                                     </td>
                                     <td>
-                                        @if (Helper::is-active('LBP') )
+                                        @if (Helper::is_active('LBP') )
                                         {{number_format(Helper::price_to_lbp($product->buy_price))}} LBP
                                         @else
                                         {{number_format($product->buy_price, 2)}} $
                                         @endif
                                     </td>
                                     <td>
-                                        @if (Helper::is-active('LBP') )
+                                        @if (Helper::is_active('LBP') )
                                         {{number_format(Helper::price_to_lbp($product->sell_price))}} LBP
                                         @else
                                         {{number_format($product->sell_price, 2)}} $
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if (Helper::is_active('LBP') )
+                                        {{number_format(Helper::price_to_lbp($product->rent_price))}} LBP
+                                        @else
+                                        {{number_format($product->rent_price, 2)}} $
                                         @endif
                                     </td>
                                     <td>

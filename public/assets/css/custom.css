@@ -110,3 +110,13 @@
     width: 100px;
     height: 100px;
 }
+
+.img-shop {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.w-custom-shop {
+    width: 80%;
+}
