@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
-use App\Models\Category;
 use App\Models\Product;
 use App\Models\Promo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -90,8 +90,13 @@ class HomeController extends Controller
                 return redirect()->back()->with('danger', 'Product not available...');
             }
 
-            $order->products()->attach($product, ['quantity' => $cart_item->quantity]);
-            $total_price += $product->sell_price * $cart_item->quantity;
+            if ($cart_item->type == 'buy') {
+                $order->products()->attach($product, ['quantity' => $cart_item->quantity, 'type' => $cart_item->type]);
+                $total_price += $product->sell_price * $cart_item->quantity;
+            } else if ($cart_item->type == 'rent') {
+                $order->products()->attach($product, ['quantity' => $cart_item->quantity, 'type' => $cart_item->type, 'rented_at' => Carbon::now(), 'rented_untill' => Carbon::now()->addMonth()]);
+                $total_price += $product->rent_price * $cart_item->quantity;
+            }
 
             $product->update([
                 'quantity' => $product->quantity - $cart_item->quantity

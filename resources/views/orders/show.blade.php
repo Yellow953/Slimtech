@@ -41,17 +41,36 @@
                                         <td>{{number_format($product->pivot->quantity)}}</td>
                                         <td>
                                             @if (Helper::is_active('LBP') )
-                                            {{number_format(Helper::price_to_lbp($product->sell_price))}} LBP
+                                            @if ($product->pivot->type == 'buy')
+                                            {{number_format(Helper::convert('LBP', $product->sell_price *
+                                            $product->pivot->quantity))}} LBP
+                                            @elseif ($product->pivot->type == 'rent')
+                                            {{number_format(Helper::convert('LBP', $product->rent_price))}} LBP
+                                            @endif
                                             @else
+                                            @if ($product->pivot->type == 'buy')
                                             {{number_format($product->sell_price, 2)}} $
+                                            @elseif ($product->pivot->type == 'rent')
+                                            {{number_format($product->rent_price, 2)}} $
+                                            @endif
                                             @endif
                                         </td>
                                         <td>
                                             @if (Helper::is_active('LBP') )
-                                            {{number_format(Helper::price_to_lbp($product->sell_price *
+                                            @if ($product->pivot->type == 'buy')
+                                            {{number_format(Helper::convert('LBP', $product->sell_price *
                                             $product->pivot->quantity))}} LBP
+                                            @elseif ($product->pivot->type == 'rent')
+                                            {{number_format(Helper::convert('LBP', $product->rent_price *
+                                            $product->pivot->quantity), 2)}} LBP
+                                            @endif
                                             @else
-                                            {{number_format($product->sell_price * $product->pivot->quantity, 2)}} $
+                                            @if ($product->pivot->type == 'buy')
+                                            {{number_format($product->sell_price *
+                                            $product->pivot->quantity, 2)}} $
+                                            @elseif ($product->pivot->type == 'rent')
+                                            {{number_format($product->rent_price * $product->pivot->quantity, 2)}} $
+                                            @endif
                                             @endif
                                         </td>
                                     </tr>

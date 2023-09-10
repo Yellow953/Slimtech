@@ -24,23 +24,34 @@ url({{asset('assets/images/bg.jpg')}});">
 <div class="container">
     <div class="row align-items-start">
         <div class="col-md-6 items">
+            <h2 class="mb-5 text-center">Items</h2>
             @forelse ($cart_items as $cart_item)
             <div class="cartItem row align-items-start">
-                <div class="col-3 mb-2">
-                    <img class="w-100" src="{{ asset($cart_item->product->image) }}" alt="art image">
+                <div class="col-2 my-auto">
+                    <img class="w-100 cart_image rounded" src="{{ asset($cart_item->product->image) }}" alt="Image">
                 </div>
-                <div class="col-3 mb-2">
-                    <h6>{{ $cart_item->product->name }}</h6>
+                <div class="col-2 my-auto">
+                    <h6>{{ ucwords($cart_item->product->name) }}</h6>
                 </div>
-                <div class="col-2">
-                    <p id="cartItem{{ $cart_item->id }}Quantity">{{ $cart_item->quantity }}</p>
+                <div class="col-2 my-auto">
+                    {{ ucwords($cart_item->type) }}
                 </div>
-                <div class="col-2">
-                    <p id="cartItem{{ $cart_item->id }}Price">${{ number_format($cart_item->product->sell_price *
-                        $cart_item->quantity, 2) }}</p>
+                <div class="col-2 my-auto">
+                    <span id="cartItem{{ $cart_item->id }}Quantity">{{ $cart_item->quantity }}</span>pcs
                 </div>
-                <div class="col-2">
-                    <a href="/cart/{{ $cart_item->id }}/destroy" class="btn btn-danger pt-2">
+                <div class="col-2 my-auto">
+                    <span id="cartItem{{ $cart_item->id }}Price">
+                        @if ($cart_item->type == 'buy')
+                        ${{ number_format($cart_item->product->sell_price *
+                        $cart_item->quantity, 2) }}
+                        @elseif ($cart_item->type == 'rent')
+                        ${{ number_format($cart_item->product->rent_price *
+                        $cart_item->quantity, 2) }}
+                        @endif
+                    </span>
+                </div>
+                <div class="col-2 my-auto">
+                    <a href="/cart/{{ $cart_item->id }}/destroy" class="btn btn-danger btn-rounded pt-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-trash-fill" viewBox="0 0 16 16">
                             <path

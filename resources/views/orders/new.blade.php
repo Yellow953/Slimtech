@@ -19,7 +19,7 @@
 
         <div class="row">
 
-            <div class="col-md-7">
+            <div class="col-md-6">
 
                 <div class="box box-primary">
 
@@ -33,14 +33,13 @@
 
                         @foreach ($categories as $category)
 
-                        <div class="panel-group col-md-5">
+                        <div class="panel-group col-md-12">
 
                             <div class="panel panel-info">
 
                                 <div class="panel-heading">
-                                    <h5 class="panel-title">
+                                    <h5 class="panel-title mb-2 mx-3">
                                         <a data-toggle="collapse" href="#{{ str_replace(' ', '-', $category->name) }}">
-                                            <img src="{{asset($category->image)}}" alt="" class="cat-icon">
                                             {{ ucfirst($category->name)}}
                                         </a>
                                     </h5>
@@ -100,7 +99,7 @@
 
             </div><!-- end of col -->
 
-            <div class="col-md-5">
+            <div class="col-md-6">
 
                 <div class="box box-primary">
 
@@ -135,13 +134,12 @@
                                     <tr>
                                         <th>Product</th>
                                         <th>Quantity</th>
+                                        <th>Type</th>
                                         <th>Price</th>
                                     </tr>
                                 </thead>
 
                                 <tbody class="order-list">
-
-
                                 </tbody>
 
                             </table><!-- end of table -->

@@ -17,6 +17,7 @@ class CartController extends Controller
         $request->validate([
             'user_id' => 'required',
             'product_id' => 'required',
+            'type' => 'required',
             'quantity' => 'required|numeric',
         ]);
 

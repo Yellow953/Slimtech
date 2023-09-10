@@ -38,7 +38,11 @@
                                         <div class="td-products">
                                             @foreach ($order->products as $product)
                                             {{ucfirst($product->name)}} :
-                                            {{number_format($product->pivot->quantity)}}<br>
+                                            {{number_format($product->pivot->quantity)}} <br>
+                                            @if ($product->pivot->type == 'rent')
+                                            (Rent :{{$product->pivot->rented_at}} -> {{$product->pivot->rented_untill}})
+                                            @endif
+                                            <br>
                                             @endforeach
                                         </div>
                                     </td>

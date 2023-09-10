@@ -7,6 +7,7 @@ use App\Models\Log;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -92,8 +93,6 @@ class OrderController extends Controller
         $user = User::findOrFail($request->user_id);
         $order = $user->orders()->create([]);
 
-        $order->products()->attach($request->products);
-
         $text = "Order " . $order->id . " : ";
         $total_price = 0;
 
@@ -104,7 +103,31 @@ class OrderController extends Controller
 
             $product = Product::FindOrFail($id);
             $text .= $product->name . " : " . $quantity['quantity'] . " , ";
-            $total_price += $product->sell_price * $quantity['quantity'];
+
+            if ($quantity['type'] == 'buy') {
+                $total_price += $product->sell_price * $quantity['quantity'];
+                $order->products()->attach([
+                    $id => [
+                        'quantity' => $quantity['quantity'],
+                        'type' => $quantity['type'],
+                    ]
+                ]);
+            } elseif ($quantity['type'] == 'rent') {
+                $total_price += $product->rent_price * $quantity['quantity'];
+
+                // Add rented_at and rented_until for "rent" products
+                $rented_at = Carbon::now();
+                $rented_untill = $rented_at->copy()->addMonth();
+
+                $order->products()->attach([
+                    $id => [
+                        'quantity' => $quantity['quantity'],
+                        'type' => $quantity['type'],
+                        'rented_at' => $rented_at,
+                        'rented_untill' => $rented_untill,
+                    ]
+                ]);
+            }
 
             $product->update([
                 'quantity' => $product->quantity - $quantity['quantity']

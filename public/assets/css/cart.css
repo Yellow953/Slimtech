@@ -98,3 +98,7 @@
 .w-90 {
     width: 88%;
 }
+
+.btn-rounded {
+    border-radius: 10px;
+}
