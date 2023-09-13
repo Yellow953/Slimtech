@@ -2,7 +2,7 @@
 <div class="container-fluid p-0 nav-bar">
     <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
         <a href="/" class="navbar-brand">
-            <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">SimTech</h1>
+            <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">SlimTech</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,8 @@
                 <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">About Us</a>
                 <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
                 @auth
-                <a href="/cart" class="nav-item nav-link {{ request()->is('cart') ? 'active' : '' }}">Cart</a>
+                <a href="/cart"
+                    class="nav-item nav-link {{ request()->is('cart') ? 'active' : '' }}">Cart({{Helper::cart_count()}})</a>
                 <a href="/profile" class="nav-item nav-link {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
                 <a href="/logout" class="nav-item nav-link {{ request()->is('logout') ? 'active' : '' }}">Logout</a>
                 @else

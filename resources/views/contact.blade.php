@@ -29,25 +29,29 @@ url({{asset('assets/images/bg.jpg')}});">
         <div class="col-sm-3 text-center mb-3">
             <i class="fa fa-2x fa-map-marker-alt mb-3 text-info"></i>
             <h4 class="font-weight-bold">Address</h4>
-            <p>123 Street, Beirut, Lebanon</p>
+            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Paris, France</a> <br>
+            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Beirut, Lebanon</a>
         </div>
-        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='tel:96176656054'" style="cursor: pointer;"
-            title="Click to Call">
+        <div class="col-sm-3 text-center mb-3">
             <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
             <h4 class="font-weight-bold">Phone</h4>
-            <p>+961 76 656 054</p>
+            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a> <br>
+            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a>
         </div>
-        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='mailto:info@slimtech.com'"
-            title="Click to Email">
-            <i class="far fa-2x fa-envelope mb-3 text-info"></i>
-            <h4 class="font-weight-bold">Email</h4>
-            <p>info@slimtech.com</p>
-        </div>
-        <div class="col-sm-3 text-center mb-3" onclick="window.location.href='
-            https://api.whatsapp.com/send/?phone=96176656054'" target="_blank" title="Click to Whatsapp">
+        <div class="col-sm-3 text-center mb-3">
             <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
             <h4 class="font-weight-bold">Whatsapp</h4>
-            <p>+961 76 656 054</p>
+            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+                title="Click to Whatsapp">+961 76
+                656 054</a> <br>
+            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+                title="Click to Whatsapp">+961 76
+                656 054</a>
+        </div>
+        <div class="col-sm-3 text-center mb-3">
+            <i class="far fa-2x fa-envelope mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Email</h4>
+            <a href="mailto:info@slimtech.com" title="Click to Email" class="text-gray">info@slimtech.com</a>
         </div>
     </div>
     <div class="row">
