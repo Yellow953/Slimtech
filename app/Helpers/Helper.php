@@ -10,7 +10,7 @@ class Helper
     public static function is_active($currency_name)
     {
         try {
-            $currency = Currency::select('active')->where('name', $currency_name)->firstOrFail();
+            $currency = Currency::where('name', $currency_name)->firstOrFail();
             return $currency->active;
         } catch (\Throwable $th) {
             session()->flash('error', 'No such currency in our database!');

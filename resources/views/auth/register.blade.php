@@ -131,6 +131,19 @@
                             </span>
                             @enderror
                         </div>
+                        <div class="form-gp">
+                            <label for="role">Role</label>
+                            <select name="role" id="role" class="form-control">
+                                <option value="user">User</option>
+                                <option value="gym">Gym</option>
+                            </select>
+
+                            @error('role')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
 
                         <div class="d-flex justify-content-end my-3">
                             <a href="#" class="my-auto" data-toggle="modal" data-target="#termsandconditions">Terms and

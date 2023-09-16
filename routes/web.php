@@ -15,10 +15,10 @@ Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
 // Admin CRM
 Route::get('/app', [App\Http\Controllers\AdminController::class, 'index']);
 
-// Dollar Rates
-Route::get('/dollar_rate/edit', [App\Http\Controllers\DollarRateController::class, 'edit']);
-Route::post('/dollar_rate/update', [App\Http\Controllers\DollarRateController::class, 'update']);
-Route::post('/dollar_rate/usage', [App\Http\Controllers\DollarRateController::class, 'usage']);
+// Currencies
+Route::get('/currency/edit', [App\Http\Controllers\CurrencyController::class, 'edit']);
+Route::post('/currency/update', [App\Http\Controllers\CurrencyController::class, 'update']);
+Route::post('/currency/active', [App\Http\Controllers\CurrencyController::class, 'active']);
 
 // Backups
 Route::get('/backup', [App\Http\Controllers\BackupController::class, 'index']);

@@ -25,9 +25,9 @@ url({{asset('assets/images/bg.jpg')}});">
         <div class="col-lg-4">
             <img class="img-fluid mb-4 mb-lg-0" src="{{asset('assets/images/logo.png')}}" alt="Image">
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 d-flex flex-column align-items-center align-items-md-start ">
             <h2 class="display-4 font-weight-bold mb-4">Who Are We?</h2>
-            <p>
+            <p class="p-4 p-md-2">
                 Welcome to SlimTech, your one-stop destination for cutting-edge fitness equipment and apparel. At
                 SlimTech, we're dedicated to helping you achieve your fitness goals by providing top-quality EMS suits
                 and a wide range of gym products. Whether you're a seasoned athlete or just starting your fitness
@@ -36,7 +36,7 @@ url({{asset('assets/images/bg.jpg')}});">
                 active lifestyle. Explore our collection and experience the future of fitness with SlimTech.
             </p>
             <div class="row py-2 my-3">
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div class="d-flex">
                         <div class="my-auto mr-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
@@ -48,7 +48,7 @@ url({{asset('assets/images/bg.jpg')}});">
                         <h4 class="font-weight-bold my-auto">Certified EMS Provider</h4>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div class="d-flex">
                         <div class="my-auto mr-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
@@ -62,7 +62,7 @@ url({{asset('assets/images/bg.jpg')}});">
                 </div>
             </div>
 
-            <a href="" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
+            <a href="#" class="btn btn-lg px-4 btn-outline-info">Learn More</a>
         </div>
     </div>
 </div>
@@ -76,7 +76,7 @@ url({{asset('assets/images/bg.jpg')}});">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/affordable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Affordable</h2>
+                    <h2 class="text-white my-3">Affordable</h2>
                     <p>
                         You can commence your EMS training without breaking the bank. Begin today by either renting or
                         purchasing our EMS Suit!
@@ -88,7 +88,7 @@ url({{asset('assets/images/bg.jpg')}});">
             <div class="d-flex align-items-center bg-info text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/comfortable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Confortable</h2>
+                    <h2 class="text-white my-3">Confortable</h2>
                     <p>
                         SlimTech is dedicated to providing comfortable EMS workouts. Our suits deliver gentle, pain-free
                         pulses, ensuring a bruise-free experience. Enjoy smooth and pleasant fitness sessions with us.
@@ -100,7 +100,7 @@ url({{asset('assets/images/bg.jpg')}});">
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/support.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Support</h2>
+                    <h2 class="text-white my-3">Support</h2>
                     <p>
                         We get your maintenance and service concerns, as we've been there too. Count on our top-notch
                         service and customer care. You can also work out at our facilities.
@@ -112,384 +112,58 @@ url({{asset('assets/images/bg.jpg')}});">
 </div>
 <!-- Features End -->
 
-<!-- Class Timetable Start -->
-<div class="container gym-feature py-5">
-    <div class="d-flex flex-column text-center mb-5">
-        <h4 class="text-info font-weight-bold">Class Timetable</h4>
-        <h4 class="display-4 font-weight-bold">Working Hours and Class Time</h4>
+
+<div class="container my-3">
+    <h2 class="mt-5">Main Branch</h2>
+    <div class="row m-3 m-md-5">
+        <div class="col-md-3 my-auto">
+            <img src="https://assets.website-files.com/61a7bda474dfe11266bb0b74/61cccbf73186dfc0dc8e9961_Locations%20.png"
+                alt="" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-9 my-auto p-3 p-md-1">
+            <h3 class="mt-3">SlimTech, France</h3>
+            <p class="my-3">
+                Our main branch is located in france, paris, rue 335. <br>
+                In this location, we have a training center where you can use our EMS suits and train... Also this is
+                the main supplier to all the other branches... <br><br>
+                We are waiting for you !!!
+            </p>
+        </div>
     </div>
-    <div class="tab-class">
-        <ul class="nav nav-pills justify-content-center mb-4">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#class-all">All Classes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#class-cardio">Cardio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#class-crossfit">Crossfit</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#class-powerlifting">Powerlifting</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div id="class-all" class="container tab-pane p-0 active">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-lg m-0">
-                        <thead class="bg-secondary text-white text-center">
-                            <tr>
-                                <th>Time</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+    <h3 class="mt-5">Sellers And Branches</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row m-3 m-md-5">
+                <div class="col-md-6 my-auto">
+                    <img src="https://assets.website-files.com/61a914abfd1d953ff6a7154f/61ca2efde49c24ef8d21a764_olivebranch_1-thumb7.jpg"
+                        alt="" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 my-auto p-3 p-md-1">
+                    <h4 class="mt-3">SlimTech, USA</h4>
+                    <p class="my-3">
+                        Join us in our USA branch and enjoy all the perks...
+                    </p>
                 </div>
             </div>
-            <div id="class-cardio" class="container tab-pane fade p-0">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-lg m-0">
-                        <thead class="bg-secondary text-white text-center">
-                            <tr>
-                                <th>Time</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Cardio</h5>John Deo
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+        </div>
+        <div class="col-md-6">
+            <div class="row m-3 m-md-5">
+                <div class="col-md-6 my-auto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSAhrFHnc4JDX5eiDfLvy40Dxzrfl9lj-sTFoiAQlEVdAF0kym_CgVK6sT_Iz9aSq6w5s&usqp=CAU"
+                        alt="" class="img-fluid rounded shadow">
                 </div>
-            </div>
-            <div id="class-crossfit" class="container tab-pane fade p-0">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-lg m-0">
-                        <thead class="bg-secondary text-white text-center">
-                            <tr>
-                                <th>Time</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Crossfit</h5>Adam Phillips
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="class-powerlifting" class="container tab-pane fade p-0">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-lg m-0">
-                        <thead class="bg-secondary text-white text-center">
-                            <tr>
-                                <th>Time</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
-                                <td></td>
-                                <td>
-                                    <h5>Cardio</h5>John Deo
-                                </td>
-                                <td></td>
-                                <td>
-                                    <h5>Crossfit</h5>Adam Phillips
-                                </td>
-                                <td></td>
-                                <td class="bg-info text-white">
-                                    <h5 class="text-white">Power Lifting</h5>James Alien
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col-md-6 my-auto p-3 p-md-1">
+                    <h4 class="mt-3">SlimTech, lebanon</h4>
+                    <p class="my-3">
+                        Join us in our Lebanon branch and enjoy all the perks...
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
-<!-- Class Timetable End -->
 
 @include('layouts._footer')
 

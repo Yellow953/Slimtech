@@ -22,7 +22,7 @@
                 <img class="w-100" src="{{asset('assets/images/carousel-2.jpg')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-info text-capitalize m-0">Achieve Your Fitness Goals</h3>
-                    <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">EMS Suits,
+                    <h2 class="display-2 m-0 my-2 my-md-4 text-white font-weight-bold text-capitalize">EMS Suits,
                         Gym Equipment...</h2>
                     <a href="/shop" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
                 </div>
@@ -45,8 +45,7 @@
     <div class="row px-3">
         <div class="col-md-6 p-0">
             <div
-                class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-info text-right text-white py-5 px-5">
-                <i class="flaticon-six-pack"></i>
+                class="gym-class-box d-flex flex-column align-items-center align-items-md-end justify-content-center bg-info text-center text-md-right text-white py-5 px-5">
                 <h3 class="display-4 mb-3 text-white font-weight-bold">EMS Provider</h3>
                 <p>
                     Experience a revolution in fitness with our state-of-the-art EMS suits. We offer
@@ -59,8 +58,7 @@
         </div>
         <div class="col-md-6 p-0">
             <div
-                class="gym-class-box d-flex flex-column align-items-start justify-content-center bg-secondary text-left text-white py-5 px-5">
-                <i class="flaticon-bodybuilding"></i>
+                class="gym-class-box d-flex flex-column align-items-center align-items-md-start justify-content-center bg-secondary text-center text-md-left text-white py-5 px-5">
                 <h3 class="display-4 mb-3 text-white font-weight-bold">Training Center</h3>
                 <p>
                     We also offer our training center space for
@@ -83,9 +81,9 @@
         <div class="col-lg-4">
             <img class="img-fluid mb-4 mb-lg-0" src="{{asset('assets/images/logo.png')}}" alt="Image">
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 d-flex flex-column align-items-center align-items-md-start ">
             <h2 class="display-4 font-weight-bold mb-4">Who Are We?</h2>
-            <p>
+            <p class="p-4 p-md-2">
                 Welcome to SlimTech, your one-stop destination for cutting-edge fitness equipment and apparel. At
                 SlimTech, we're dedicated to helping you achieve your fitness goals by providing top-quality EMS suits
                 and a wide range of gym products. Whether you're a seasoned athlete or just starting your fitness
@@ -94,7 +92,7 @@
                 active lifestyle. Explore our collection and experience the future of fitness with SlimTech.
             </p>
             <div class="row py-2 my-3">
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div class="d-flex">
                         <div class="my-auto mr-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
@@ -106,7 +104,7 @@
                         <h4 class="font-weight-bold my-auto">Certified EMS Provider</h4>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-6">
                     <div class="d-flex">
                         <div class="my-auto mr-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
@@ -134,7 +132,7 @@
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/affordable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Affordable</h2>
+                    <h2 class="text-white my-3">Affordable</h2>
                     <p>
                         You can commence your EMS training without breaking the bank. Begin today by either renting or
                         purchasing our EMS Suit!
@@ -146,7 +144,7 @@
             <div class="d-flex align-items-center bg-info text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/comfortable.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Confortable</h2>
+                    <h2 class="text-white my-3">Confortable</h2>
                     <p>
                         SlimTech is dedicated to providing comfortable EMS workouts. Our suits deliver gentle, pain-free
                         pulses, ensuring a bruise-free experience. Enjoy smooth and pleasant fitness sessions with us.
@@ -158,7 +156,7 @@
             <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
                 <img src="{{asset('assets/images/support.png')}}" alt="" class="svg-icon">
                 <div class="">
-                    <h2 class="text-white mb-3">Support</h2>
+                    <h2 class="text-white my-3">Support</h2>
                     <p>
                         We get your maintenance and service concerns, as we've been there too. Count on our top-notch
                         service and customer care. You can also work out at our facilities.
@@ -181,11 +179,12 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-2.jpg')}}" alt="Image">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-2.jpg')}}"
+                        alt="Image">
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 p-3 p-md-1">
                     <h4 class="font-weight-bold">Efficient Muscle Activation</h4>
-                    <p>
+                    <p class="small">
                         EMS technology can simultaneously target multiple muscle groups, making it an efficient way to
                         activate and engage your muscles. This can help you achieve a more effective workout in less
                         time compared to traditional exercise routines.
@@ -196,11 +195,12 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-1.jpg')}}" alt="Image">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-1.jpg')}}"
+                        alt="Image">
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 p-3 p-md-1">
                     <h4 class="font-weight-bold">Time-Saving</h4>
-                    <p>
+                    <p class="small">
                         With an EMS suit, you can get a full-body workout in a shorter amount of time. This is
                         especially appealing for individuals with busy schedules who struggle to find time for lengthy
                         gym sessions. EMS can be a time-efficient alternative for maintaining or improving muscle tone
@@ -212,11 +212,12 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-3.jpg')}}" alt="Image">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-3.jpg')}}"
+                        alt="Image">
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 p-3 p-md-1">
                     <h4 class="font-weight-bold">Muscle Recovery</h4>
-                    <p>
+                    <p class="small">
                         EMS technology is not only for workouts but can also aid in muscle recovery. Many EMS devices
                         offer programs designed specifically for recovery and relaxation, helping to reduce muscle
                         soreness and stiffness after intense physical activity.
@@ -227,15 +228,33 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}" alt="Image">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                        alt="Image">
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-7 p-3 p-md-1">
                     <h4 class="font-weight-bold">Customized Training</h4>
-                    <p>
-                        Some EMS suits come with mobile apps or control panels that allow you to customize your workout
+                    <p class="small">
+                        Our EMS suits come with mobile apps or control panels that allow you to customize your workout
                         intensity and target specific muscle groups. This level of personalization can help you tailor
                         your training to your fitness goals, whether it's muscle building, fat loss, or improved
                         endurance.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="offset-md-3 col-md-6 mb-5">
+            <div class="row align-items-center">
+                <div class="col-sm-5">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                        alt="Image">
+                </div>
+                <div class="col-sm-7 p-3 p-md-1">
+                    <h4 class="font-weight-bold">Home Usage</h4>
+                    <p class="small">
+                        Our EMS suits guides users on effectively integrating electrical muscle stimulation into their
+                        home workouts. It offers tailored instructions, safety precautions, and personalized training
+                        plans for convenient use at home, enabling users to enhance muscle strength and toning without
+                        gym visits.
                     </p>
                 </div>
             </div>
@@ -317,7 +336,7 @@ url({{asset('assets/images/bg.jpg')}});">
 <!-- Testimonial End -->
 
 <!-- Class Timetable Start -->
-<div class="container gym-feature py-5">
+{{-- <div class="container gym-feature py-5">
     <div class="d-flex flex-column text-center mb-5">
         <h4 class="text-info font-weight-bold">Class Timetable</h4>
         <h4 class="display-4 font-weight-bold">Working Hours and Class Time</h4>
@@ -692,8 +711,46 @@ url({{asset('assets/images/bg.jpg')}});">
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Class Timetable End -->
+
+<!-- Contact Start -->
+<div class="container pt-5">
+    <div class="d-flex flex-column text-center mb-5">
+        <h4 class="text-info font-weight-bold">Get In Touch</h4>
+        <h4 class="display-4 font-weight-bold">Contact Us For More Informations</h4>
+    </div>
+    <div class="row px-3 pb-2">
+        <div class="col-sm-3 text-center mb-3">
+            <i class="fa fa-2x fa-map-marker-alt mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Address</h4>
+            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Paris, France</a> <br>
+            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Beirut, Lebanon</a>
+        </div>
+        <div class="col-sm-3 text-center mb-3">
+            <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Phone</h4>
+            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a> <br>
+            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a>
+        </div>
+        <div class="col-sm-3 text-center mb-3">
+            <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Whatsapp</h4>
+            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+                title="Click to Whatsapp">+961 76
+                656 054</a> <br>
+            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+                title="Click to Whatsapp">+961 76
+                656 054</a>
+        </div>
+        <div class="col-sm-3 text-center mb-3">
+            <i class="far fa-2x fa-envelope mb-3 text-info"></i>
+            <h4 class="font-weight-bold">Email</h4>
+            <a href="mailto:info@slimtech.com" title="Click to Email" class="text-gray">info@slimtech.com</a>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
 
 @include('layouts._footer')
 

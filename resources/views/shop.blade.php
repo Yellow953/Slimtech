@@ -90,14 +90,19 @@
                                         <input type="hidden" name="product_id" value="{{$e->id}}">
                                         <input type="number" name="quantity" id="quantity"
                                             class="form-control input-field quantity-field mx-1" value="1" step="1">
+                                        @if(auth()->user()->role == 'gym' || auth()->user()->role == 'admin')
                                         <select name="type" id="type"
                                             class="form-control input-field quantity-field mx-1">
                                             <option value="buy">Buy</option>
                                             <option value="rent">Rent</option>
                                         </select>
+                                        @endif
 
-                                        <button type="submit" class="btn btn-info mx-2 rounded">Add to
-                                            Cart</button>
+                                        <button type="submit"
+                                            class="btn btn-info mx-2 rounded d-flex align-items-center">
+                                            <span class="fa fa-plus mr-1"></span>
+                                            Cart
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -189,13 +194,17 @@
                                         <input type="hidden" name="product_id" value="{{$product->id}}">
                                         <input type="number" name="quantity" id="quantity"
                                             class="form-control input-field quantity-field mx-1" value="1" step="1">
+
+                                        @if(auth()->user()->role == 'gym' || auth()->user()->role == 'admin')
                                         <select name="type" id="type"
                                             class="form-control input-field quantity-field mx-1">
                                             <option value="buy">Buy</option>
                                             <option value="rent">Rent</option>
                                         </select>
+                                        @endif
 
-                                        <button type="submit" class="btn btn-info mx-2 rounded">Add to
+                                        <button type="submit" class="btn btn-info mx-2 rounded">
+                                            <span class="fa fa-plus"></span>
                                             Cart</button>
                                     </div>
                                 </form>
@@ -288,13 +297,9 @@
                                         <input type="hidden" name="product_id" value="{{$service->id}}">
                                         <input type="number" name="quantity" id="quantity"
                                             class="form-control input-field quantity-field mx-1" value="1" step="1">
-                                        <select name="type" id="type"
-                                            class="form-control input-field quantity-field mx-1">
-                                            <option value="buy">Buy</option>
-                                            <option value="rent">Rent</option>
-                                        </select>
 
-                                        <button type="submit" class="btn btn-info mx-2 rounded">Add to
+                                        <button type="submit" class="btn btn-info mx-2 rounded">
+                                            <span class="fa fa-plus"></span>
                                             Cart</button>
                                     </div>
                                 </form>
