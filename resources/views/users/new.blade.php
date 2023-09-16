@@ -51,6 +51,7 @@
                 <label for="role" class="col-form-label">Role</label>
                 <select class="form-control input-rounded" name="role">
                     <option value="user" selected>User</option>
+                    <option value="gym">Gym</option>
                     <option value="admin">Admin</option>
                 </select>
             </div>

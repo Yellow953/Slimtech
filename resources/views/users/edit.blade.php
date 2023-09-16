@@ -20,6 +20,14 @@
                 <input class="form-control input-rounded" name="address" value="{{$user->address}}" type="text">
             </div>
             <div class="form-group">
+                <label for="role" class="col-form-label">Role</label>
+                <select class="form-control input-rounded" name="role">
+                    <option value="user" {{$user->role == 'user' ? 'selected' : ''}}>User</option>
+                    <option value="gym" {{$user->role == 'gym' ? 'selected' : ''}}>Gym</option>
+                    <option value="admin" {{$user->role == 'admin' ? 'selected' : ''}}>Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="medical_condition" class="col-form-label">Medical Condition</label>
                 <textarea name="medical_condition" id="medical_condition" rows="5"
                     placeholder="Please describe your medical condition if you have any!"

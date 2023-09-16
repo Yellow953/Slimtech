@@ -65,6 +65,7 @@ class UserController extends Controller
 
         $user->phone = $request->phone;
         $user->address = $request->address;
+        $user->role = $request->role;
         $user->medical_condition = $request->medical_condition;
 
         $user->save();
