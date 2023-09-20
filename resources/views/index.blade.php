@@ -242,7 +242,7 @@
                 </div>
             </div>
         </div>
-        <div class="offset-md-3 col-md-6 mb-5">
+        <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
                     <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
@@ -258,6 +258,26 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6 mb-5 border-danger p-3">
+            <div class="row align-items-center">
+                <div class="col-sm-5">
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                        alt="Image">
+                </div>
+                <div class="col-sm-7 p-3 p-md-1">
+                    <h4 class="font-weight-bold">Who can use EMS?</h4>
+                    <p class="small">
+                        In general, EMS Electro Stimulation device
+                        is suitable for almost everyone whether male or female, young (18+) or old. <br>
+
+                        Except for clients with any of the following: Heart disease, Pacemaker, Extreme blood pressure,
+                        Thrombosis, Circulatory, disorders, Arteriosclerosis, Pregnancy, Epilepsy, Neurological
+                        diseases, Bleeding tendencies, Febrile, bacterial or viral disease, Hernia
+                    </p>
+                </div>
+            </div>
+            <h5 class="text-danger text-center">Important</h5>
         </div>
     </div>
 </div>
