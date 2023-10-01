@@ -129,3 +129,15 @@
   border: solid red 2px;
   border-radius: 15px;
 }
+.date {
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  padding-top: 2.5px !important;
+  padding-bottom: 2.5px !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 20px;
+  font-size: smaller;
+}

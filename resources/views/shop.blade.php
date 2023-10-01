@@ -48,6 +48,12 @@
                                         <img src="{{asset($e->image)}}" class="img-modal rounded shadow"
                                             alt="Main Image">
                                     </div>
+                                    @foreach ($e->secondary_images as $secondary_image)
+                                    <div class="carousel-item">
+                                        <img src="{{asset($secondary_image->image)}}" class="img-modal"
+                                            alt="Secondary Image">
+                                    </div>
+                                    @endforeach
                                 </div>
                                 <a class="carousel-control-prev" href="#productImageCarousel{{$e->id}}" role="button"
                                     data-slide="prev">
@@ -152,6 +158,12 @@
                                         <img src="{{asset($product->image)}}" class="img-modal rounded shadow"
                                             alt="Main Image">
                                     </div>
+                                    @foreach ($product->secondary_images as $secondary_image)
+                                    <div class="carousel-item">
+                                        <img src="{{asset($secondary_image->image)}}" class="img-modal"
+                                            alt="Secondary Image">
+                                    </div>
+                                    @endforeach
                                 </div>
                                 <a class="carousel-control-prev" href="#productImageCarousel{{$product->id}}"
                                     role="button" data-slide="prev">
@@ -255,6 +267,12 @@
                                         <img src="{{asset($service->image)}}" class="img-modal rounded shadow"
                                             alt="Main Image">
                                     </div>
+                                    @foreach ($service->secondary_images as $secondary_image)
+                                    <div class="carousel-item">
+                                        <img src="{{asset($secondary_image->image)}}" class="img-modal"
+                                            alt="Secondary Image">
+                                    </div>
+                                    @endforeach
                                 </div>
                                 <a class="carousel-control-prev" href="#productImageCarousel{{$service->id}}"
                                     role="button" data-slide="prev">

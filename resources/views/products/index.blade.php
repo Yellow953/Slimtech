@@ -6,10 +6,12 @@
         <div class="col-12 my-3">
             <div class="d-flex justify-content-between">
                 <h4 class="header-title my-auto">Products</h4>
-                <a href="/product/new" class="btn btn-primary btn-rounded my-auto">Add</a>
+                <div>
+                    <a href="/product/rented" class="btn btn-secondary btn-rounded my-auto">Rented</a>
+                    <a href="/product/new" class="btn btn-primary btn-rounded my-auto">Add</a>
+                </div>
             </div>
         </div>
-
 
         <!-- data table start -->
         <div class="col-12">
@@ -72,6 +74,8 @@
                                     @if (Auth::user()->role == "admin")
                                     <td>
                                         <div class="d-flex justify-content-center">
+                                            <a href="/product/{{$product->id}}/secondary_images"
+                                                class="btn btn-secondary btn-rounded m-1">Secondary Images</a>
                                             <a href="/product/{{$product->id}}/rent"
                                                 class="btn btn-secondary btn-rounded m-1">Rent</a>
                                             <a href="/product/{{$product->id}}/import"

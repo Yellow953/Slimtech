@@ -51,6 +51,7 @@ Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'inde
 
 // Products
 Route::get('/product/search', [App\Http\Controllers\ProductController::class, 'search']);
+Route::get('/product/rented', [App\Http\Controllers\ProductController::class, 'rented']);
 Route::get('/product/new', [App\Http\Controllers\ProductController::class, 'new']);
 Route::post('/product/create', [App\Http\Controllers\ProductController::class, 'create']);
 Route::get('/product/{id}/edit', [App\Http\Controllers\ProductController::class, 'edit']);
@@ -61,6 +62,11 @@ Route::get('/product/{id}/rent', [App\Http\Controllers\ProductController::class,
 Route::post('/product/{id}/rent_save', [App\Http\Controllers\ProductController::class, 'rent_save']);
 Route::get('/product/{id}/destroy', [App\Http\Controllers\ProductController::class, 'destroy']);
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'index']);
+Route::get('/product_order/{id}/return', [App\Http\Controllers\ProductController::class, 'return']);
+// Secondary Images
+Route::get('/product/{id}/secondary_images', [App\Http\Controllers\ProductController::class, 'secondary_images_index']);
+Route::post('/secondary_image/create', [App\Http\Controllers\ProductController::class, 'secondary_images_create']);
+Route::get('/secondary_image/{id}/destroy', [App\Http\Controllers\ProductController::class, 'secondary_images_destroy']);
 
 // Orders
 Route::get('/order/{id}/complete', [App\Http\Controllers\OrderController::class, 'complete']);
