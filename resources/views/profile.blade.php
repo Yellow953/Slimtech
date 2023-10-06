@@ -25,9 +25,9 @@
     <script src="{{asset('admin/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
     <style>
-        .login-area {
-            background: url('{{asset("assets/images/bg.jpg")}}') no-repeat center center fixed;
-            background-size: cover;
+        .login-area { 
+            background: rgb(30,144,255);
+            background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(147,112,219,1) 100%);
         }
     </style>
 </head>

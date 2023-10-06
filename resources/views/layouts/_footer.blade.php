@@ -1,6 +1,6 @@
 <!-- Footer Start -->
 <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url({{asset('assets/images/bg.jpg')}});">
+url({{asset('assets/images/pic8.png')}});  background-size:contain; background-position:center; background-repeat:no-repeat;">
     <div class="row pt-5">
         <div class="col-md-3 mb-5">
             <h4 class="text-info mb-4">Quick Links</h4>

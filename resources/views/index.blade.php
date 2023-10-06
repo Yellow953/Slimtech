@@ -9,7 +9,7 @@
     <div id="blog-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="{{asset('assets/images/carousel-1.jpg')}}" alt="Image">
+                <img class="w-100" src="{{asset('assets/images/pic9.png')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-info text-capitalize m-0">Your Fitness Partner</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="{{asset('assets/images/carousel-2.jpg')}}" alt="Image">
+                <img class="w-100" src="{{asset('assets/images/pic12.png')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-info text-capitalize m-0">Achieve Your Fitness Goals</h3>
                     <h2 class="display-2 m-0 my-2 my-md-4 text-white font-weight-bold text-capitalize">EMS Suits,
@@ -179,10 +179,10 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-2.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic3.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Efficient Muscle Activation</h4>
                     <p class="small">
                         EMS technology can simultaneously target multiple muscle groups, making it an efficient way to
@@ -195,10 +195,10 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-1.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic14.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Time-Saving</h4>
                     <p class="small">
                         With an EMS suit, you can get a full-body workout in a shorter amount of time. This is
@@ -212,10 +212,10 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-3.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic5.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Muscle Recovery</h4>
                     <p class="small">
                         EMS technology is not only for workouts but can also aid in muscle recovery. Many EMS devices
@@ -228,10 +228,10 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic4.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Customized Training</h4>
                     <p class="small">
                         Our EMS suits come with mobile apps or control panels that allow you to customize your workout
@@ -245,10 +245,10 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic10.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Home Usage</h4>
                     <p class="small">
                         Our EMS suits guides users on effectively integrating electrical muscle stimulation into their
@@ -262,10 +262,10 @@
         <div class="col-md-6 mb-5 border-danger p-3">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/feature-4.jpg')}}"
+                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic11.png')}}"
                         alt="Image">
                 </div>
-                <div class="col-sm-7 p-3 p-md-1">
+                <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
                     <h4 class="font-weight-bold">Who can use EMS?</h4>
                     <p class="small">
                         In general, EMS Electro Stimulation device
@@ -285,7 +285,7 @@
 
 <!-- Testimonial Start -->
 <div class="container-fluid position-relative testimonial my-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url({{asset('assets/images/bg.jpg')}});">
+url({{asset('assets/images/pic8.png')}});">
     <div class="container">
         <div class="row px-3 align-items-center">
             <div class="col-md-6 bg-secondary">
