@@ -2,7 +2,8 @@
 <div class="container-fluid p-0 nav-bar">
     <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
         <a href="/" class="navbar-brand">
-            <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">SlimTech</h1>
+            {{-- <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">SlimTech</h1> --}}
+            <img src="{{asset('assets/images/logo.png')}}" class="logo-header" alt="">
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -11,7 +12,7 @@
             <div class="navbar-nav ml-auto p-4 bg-secondary border-rounded text-center">
                 <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                 <a href="/shop" class="nav-item nav-link {{ request()->is('shop') ? 'active' : '' }}">Shop</a>
-                <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">About Us</a>
+                <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
                 <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
                 @auth
                 <a href="/cart"

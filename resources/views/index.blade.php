@@ -9,7 +9,7 @@
     <div id="blog-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="{{asset('assets/images/pic9.png')}}" alt="Image">
+                <img class="w-100" src="{{asset('assets/images/pic8.png')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-info text-capitalize m-0">Your Fitness Partner</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="{{asset('assets/images/pic12.png')}}" alt="Image">
+                <img class="w-100" src="{{asset('assets/images/pic8.png')}}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="text-info text-capitalize m-0">Achieve Your Fitness Goals</h3>
                     <h2 class="display-2 m-0 my-2 my-md-4 text-white font-weight-bold text-capitalize">EMS Suits,
@@ -179,7 +179,7 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic3.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic3.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -195,7 +195,7 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic14.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic14.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -212,7 +212,7 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic5.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic5.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -228,7 +228,7 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic4.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic15.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -245,7 +245,7 @@
         <div class="col-md-6 mb-5">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic10.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic4.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -262,7 +262,7 @@
         <div class="col-md-6 mb-5 border-danger p-3">
             <div class="row align-items-center">
                 <div class="col-sm-5">
-                    <img class="img-fluid rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic11.png')}}"
+                    <img class="img-square rounded shadow mb-3 mb-sm-0" src="{{asset('assets/images/pic2.png')}}"
                         alt="Image">
                 </div>
                 <div class="col-sm-7 p-3 p-md-1 text-center text-md-left">
@@ -750,16 +750,16 @@ url({{asset('assets/images/pic8.png')}});">
         <div class="col-sm-3 text-center mb-3">
             <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
             <h4 class="font-weight-bold">Phone</h4>
-            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a> <br>
-            <a class="text-gray" href="tel:96176656054" title="Click to Call">+961 76 656 054</a>
+            <a class="text-gray" href="tel:96170580898" title="Click to Call">+961 70 580 898</a> <br>
+            <a class="text-gray" href="tel:96170580898" title="Click to Call">+961 70 580 898</a>
         </div>
         <div class="col-sm-3 text-center mb-3">
             <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
             <h4 class="font-weight-bold">Whatsapp</h4>
-            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+            <a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-gray" target="_blank"
                 title="Click to Whatsapp">+961 76
                 656 054</a> <br>
-            <a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-gray" target="_blank"
+            <a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-gray" target="_blank"
                 title="Click to Whatsapp">+961 76
                 656 054</a>
         </div>

@@ -7,7 +7,7 @@ url({{asset('assets/images/pic8.png')}});  background-size:contain; background-p
             <div class="d-flex flex-column justify-content-start">
                 <a class="text-white mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
                 <a class="text-white mb-2" href="/shop"><i class="fa fa-angle-right mr-2"></i>Shop</a>
-                <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About</a>
                 <a class="text-white mb-2" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
             </div>
         </div>
@@ -20,11 +20,11 @@ url({{asset('assets/images/pic8.png')}});  background-size:contain; background-p
                     <p>France</p>
                     <div class="mx-3">
                         <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, Paris, France</p>
-                        <p><a href="tel:96176656054" class="text-white"><i class="fa fa-phone-alt mr-2"></i>+961 76 656
+                        <p><a href="tel:96170580898" class="text-white"><i class="fa fa-phone-alt mr-2"></i>+961 76 656
                                 054</a>
                         </p>
-                        <p><a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-white"><i
-                                    class="fab fa-whatsapp mr-2"></i>+961 76 656 054</a>
+                        <p><a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-white"><i
+                                    class="fab fa-whatsapp mr-2"></i>+961 70 580 898</a>
                         </p>
                         <p><a href="mailto:info@slimtech.com" class="text-white"><i
                                     class="fa fa-envelope mr-2"></i>info@slimtech.com</a></p>
@@ -34,11 +34,11 @@ url({{asset('assets/images/pic8.png')}});  background-size:contain; background-p
                     <p>Lebanon</p>
                     <div class="mx-3">
                         <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, Beirut, Lebanon</p>
-                        <p><a href="tel:96176656054" class="text-white"><i class="fa fa-phone-alt mr-2"></i>+961 76 656
+                        <p><a href="tel:96170580898" class="text-white"><i class="fa fa-phone-alt mr-2"></i>+961 76 656
                                 054</a>
                         </p>
-                        <p><a href="https://api.whatsapp.com/send/?phone=96176656054" class="text-white"><i
-                                    class="fab fa-whatsapp mr-2"></i>+961 76 656 054</a>
+                        <p><a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-white"><i
+                                    class="fab fa-whatsapp mr-2"></i>+961 70 580 898</a>
                         </p>
                         <p><a href="mailto:info@slimtech.com" class="text-white"><i
                                     class="fa fa-envelope mr-2"></i>info@slimtech.com</a></p>

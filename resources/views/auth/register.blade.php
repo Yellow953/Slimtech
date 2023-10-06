@@ -263,7 +263,7 @@
                             Contact Us
                         </li>
                         <p>If you have any questions or concerns about these Terms or our Services, please contact us at
-                            +961 76 656 054.</p><br>
+                            +961 70 580 898.</p><br>
                     </ol><br>
 
                     <p>By using our Services, you agree to these Terms and our policies. Thank you for choosing Slimtech
