@@ -43,13 +43,13 @@
                     @csrf
                     <div class="d-flex flex-row">
                         <input type="file" name="categories" required
-                            class="form-control input-field border input-rounded">
-                        <button type="submit" class="btn btn-info btn-rounded m-2">Import</button>
+                            class="form-control">
+                        <button type="submit" class="btn btn-info px-3 py-2 m-2">Import</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
-                <a href="/backup/export/categories" class="text-center btn btn-info m-2 btn-rounded">
+                <a href="/backup/export/categories" class="text-center btn btn-info m-2 px-3 py-2">
                     Export
                 </a>
             </div>
@@ -63,13 +63,13 @@
                     @csrf
                     <div class="d-flex flex-row">
                         <input type="file" name="products" required
-                            class="form-control input-field border input-rounded">
-                        <button type="submit" class="btn btn-info btn-rounded m-2">Import</button>
+                            class="form-control">
+                        <button type="submit" class="btn btn-info px-3 py-2 m-2">Import</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
-                <a href="/backup/export/products" class="text-center btn btn-info m-2 btn-rounded">
+                <a href="/backup/export/products" class="text-center btn btn-info m-2 px-3 py-2">
                     Export
                 </a>
             </div>
@@ -82,13 +82,13 @@
                 <form action="/backup/import/logs" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="d-flex flex-row">
-                        <input type="file" name="logs" required class="form-control input-field border input-rounded">
-                        <button type="submit" class="btn btn-info btn-rounded m-2">Import</button>
+                        <input type="file" name="logs" required class="form-control">
+                        <button type="submit" class="btn btn-info px-3 py-2 m-2">Import</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
-                <a href="/backup/export/logs" class="text-center btn btn-info m-2 btn-rounded">
+                <a href="/backup/export/logs" class="text-center btn btn-info m-2 px-3 py-2">
                     Export
                 </a>
             </div>
@@ -102,13 +102,13 @@
                 <form action="/backup/import/users" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="d-flex flex-row">
-                        <input type="file" name="users" required class="form-control input-field border input-rounded">
-                        <button type="submit" class="btn btn-info btn-rounded m-2">Import</button>
+                        <input type="file" name="users" required class="form-control">
+                        <button type="submit" class="btn btn-info px-3 py-2 m-2">Import</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
-                <a href="/backup/export/users" class="text-center btn btn-info m-2 btn-rounded">
+                <a href="/backup/export/users" class="text-center btn btn-info m-2 px-3 py-2">
                     Export
                 </a>
             </div>
@@ -121,13 +121,13 @@
                 <form action="/backup/import/orders" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="d-flex flex-row">
-                        <input type="file" name="orders" required class="form-control input-field border input-rounded">
-                        <button type="submit" class="btn btn-info btn-rounded m-2">Import</button>
+                        <input type="file" name="orders" required class="form-control">
+                        <button type="submit" class="btn btn-info px-3 py-2 m-2">Import</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
-                <a href="/backup/export/orders" class="text-center btn btn-info m-2 btn-rounded">
+                <a href="/backup/export/orders" class="text-center btn btn-info m-2 px-3 py-2">
                     Export
                 </a>
             </div>

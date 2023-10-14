@@ -13,6 +13,8 @@ return new class extends Migration {
             $table->string('status')->default('new');
             $table->double('total_price')->unsigned()->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

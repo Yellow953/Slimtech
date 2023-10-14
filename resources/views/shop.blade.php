@@ -88,24 +88,37 @@
                                 </p>
                                 @endif
 
-                                <form action="/cart/create" method="post" enctype="multipart/form-data"
-                                    class="w-100 my-2">
-                                    @csrf
-                                    <div class="w-100 d-flex justify-content-center">
-                                        <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
-                                        <input type="hidden" name="product_id" value="{{$e->id}}">
-                                        <input type="number" name="quantity" id="quantity"
-                                            class="form-control input-field quantity-field mx-1" value="1" step="1">
+                                <form action="#" method="post" enctype="multipart/form-data" class="w-100 my-2">
+                                    <div class="w-md-100 d-flex justify-content-center">
+                                        <input type="number" name="quantity" id="quantity" class="form-control input-field quantity-field mx-1" value="1" step="1">
+                                        <select name="size" id="size" class="form-control input-field quantity-field mx-1">
+                                            <option value="XXS">XXS</option>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M" selected>M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="XXL">XXL</option>
+                                            <option value="3XL">3XL</option>
+                                            <option value="4XL">4XL</option>
+                                        </select>
+                                        @guest
+                                        <input type="hidden" name="type" id="type" value="buy">
+                                        <input type="hidden" name="months" id="months" value="0">
+                                        @else
                                         @if(auth()->user()->role == 'gym' || auth()->user()->role == 'admin')
-                                        <select name="type" id="type"
-                                            class="form-control input-field quantity-field mx-1">
+                                        <select name="type" id="type" class="form-control input-field quantity-field mx-1">
                                             <option value="buy">Buy</option>
                                             <option value="rent">Rent</option>
                                         </select>
+                                        <input type="number" name="months" id="months" class="form-control input-field quantity-field mx-1" step="1" placeholder="Months...">
+                                        @else
+                                        <input type="hidden" name="type" id="type" value="buy">
+                                        <input type="hidden" name="months" id="months" value="0">
                                         @endif
-
-                                        <button type="submit"
-                                            class="btn btn-info mx-2 rounded d-flex align-items-center">
+                                        @endguest
+                                        
+                                        <button type="button" onclick="addToCart({{$e->id}}, this.form)" class="btn btn-info mx-2 rounded d-flex align-items-center">
                                             <span class="fa fa-plus mr-1"></span>
                                             Cart
                                         </button>
@@ -198,26 +211,32 @@
                                 </p>
                                 @endif
 
-                                <form action="/cart/create" method="post" enctype="multipart/form-data"
-                                    class="w-100 my-2">
-                                    @csrf
-                                    <div class="w-100 d-flex justify-content-center">
-                                        <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
-                                        <input type="hidden" name="product_id" value="{{$product->id}}">
-                                        <input type="number" name="quantity" id="quantity"
-                                            class="form-control input-field quantity-field mx-1" value="1" step="1">
-
+                                <form action="#" method="post" enctype="multipart/form-data" class="w-100 my-2">
+                                    <div class="w-md-100 d-flex justify-content-center">
+                                        <input type="number" name="quantity" id="quantity" class="form-control input-field quantity-field mx-1" value="1" step="1">
+                                        
+                                        @guest
+                                        <input type="hidden" name="type" id="type" value="buy">
+                                        <input type="hidden" name="size" id="size" value="">
+                                        <input type="hidden" name="months" id="months" value="0">
+                                        @else
                                         @if(auth()->user()->role == 'gym' || auth()->user()->role == 'admin')
-                                        <select name="type" id="type"
-                                            class="form-control input-field quantity-field mx-1">
+                                        <select name="type" id="type" class="form-control input-field quantity-field mx-1">
                                             <option value="buy">Buy</option>
                                             <option value="rent">Rent</option>
                                         </select>
+                                        <input type="number" name="months" id="months" class="form-control input-field quantity-field mx-1" step="1" placeholder="Months...">
+                                        @else
+                                        <input type="hidden" name="type" id="type" value="buy">
+                                        <input type="hidden" name="size" id="size" value="">
+                                        <input type="hidden" name="months" id="months" value="0">
                                         @endif
-
-                                        <button type="submit" class="btn btn-info mx-2 rounded">
-                                            <span class="fa fa-plus"></span>
-                                            Cart</button>
+                                        @endguest
+                                        
+                                        <button type="button" onclick="addToCart({{$product->id}}, this.form)" class="btn btn-info mx-2 rounded d-flex align-items-center">
+                                            <span class="fa fa-plus mr-1"></span>
+                                            Cart
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -307,18 +326,18 @@
                                 </p>
                                 @endif
 
-                                <form action="/cart/create" method="post" enctype="multipart/form-data"
-                                    class="w-100 my-2">
-                                    @csrf
-                                    <div class="w-100 d-flex justify-content-center">
-                                        <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
-                                        <input type="hidden" name="product_id" value="{{$service->id}}">
-                                        <input type="number" name="quantity" id="quantity"
-                                            class="form-control input-field quantity-field mx-1" value="1" step="1">
+                                <form action="#" method="post" enctype="multipart/form-data" class="w-100 my-2">
+                                    <div class="w-md-100 d-flex justify-content-center">
+                                        <input type="number" name="quantity" id="quantity" class="form-control input-field quantity-field mx-1" value="1" step="1">
 
-                                        <button type="submit" class="btn btn-info mx-2 rounded">
-                                            <span class="fa fa-plus"></span>
-                                            Cart</button>
+                                        <input type="hidden" name="type" id="type" value="buy">
+                                        <input type="hidden" name="size" id="size" value="">
+                                        <input type="hidden" name="months" id="months" value="0">
+                                        
+                                        <button type="button" onclick="addToCart({{$service->id}}, this.form)" class="btn btn-info mx-2 rounded d-flex align-items-center">
+                                            <span class="fa fa-plus mr-1"></span>
+                                            Cart
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -338,5 +357,45 @@
 <!-- Shop End -->
 
 @include('layouts._footer')
+
+<script>
+    function addToCart(productId, form) {
+        var quantity = parseInt(form.querySelector('#quantity').value) || 1;
+        var size = form.querySelector('#size').value;
+        var type = form.querySelector('#type').value;
+        var months = parseInt(form.querySelector('#months').value) || 1;
+
+        try {
+            var cart = JSON.parse(getCookie('cart'));
+        } catch (error) {
+            var cart = {};
+        }
+
+        if (cart[productId]) {
+            cart[productId].quantity += quantity;
+        } else {
+            cart[productId] = {
+                quantity: quantity,
+                size: size,
+                type: type,
+                months: months
+            };
+        }
+
+        document.cookie = 'cart=' + JSON.stringify(cart) + ';path=/';
+
+        // increase cart count
+        var currentCount = parseInt(document.getElementById('cartCount').innerText);
+        var newCount = currentCount + 1;
+        document.getElementById('cartCount').innerText = newCount;
+
+        alert('Item added to cart!');
+    }
+
+    function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+    }
+</script>
 
 @endsection

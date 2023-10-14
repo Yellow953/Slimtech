@@ -2,6 +2,14 @@
 
 @section('content')
 
+<script src="{{asset('/admin/js/order.js')}}"></script>
+
+<style>
+    .table td, th{
+        width: 100px
+    }
+</style>
+
 <div class="content-wrapper m-3">
 
     <section class="content-header mb-3 d-flex justify-content-between my-3">
@@ -19,7 +27,7 @@
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <div class="box box-primary">
 
@@ -69,7 +77,7 @@
                                                 <td>
                                                     <a href="" id="product-{{ $product->id }}"
                                                         data-name="{{ $product->name }}" data-id="{{ $product->id }}"
-                                                        data-price="{{ $product->sell_price }}"
+                                                        data-price="{{ $product->sell_price }}" data-rent-price="{{ $product->rent_price }}"
                                                         class="btn btn-success btn-sm add-product-btn">
                                                         <i class="fa fa-plus"></i>
                                                     </a>
@@ -99,7 +107,7 @@
 
             </div><!-- end of col -->
 
-            <div class="col-md-6">
+            <div class="col-md-7">
 
                 <div class="box box-primary">
 
@@ -111,7 +119,7 @@
 
                     <div class="box-body">
 
-                        <form action="/order/create" method="post">
+                        <form action="/orders/create" method="post">
 
                             {{ csrf_field() }}
                             {{ method_field('post') }}
@@ -121,7 +129,7 @@
                                     <label for="user_id" class="mt-1">User</label>
                                 </div>
                                 <div class="col-9">
-                                    <select name="user_id" id="user_id" required class="form-control">
+                                    <select name="user_id" id="user_id" required class="form-control py-0">
                                         @foreach ($users as $user)
                                         <option value="{{$user->id}}">{{$user->name}}</option>
                                         @endforeach
@@ -133,8 +141,10 @@
                                 <thead>
                                     <tr>
                                         <th>Product</th>
+                                        <th>Size</th>
                                         <th>Quantity</th>
                                         <th>Type</th>
+                                        <th>Months</th>
                                         <th>Price</th>
                                     </tr>
                                 </thead>
@@ -144,8 +154,13 @@
 
                             </table><!-- end of table -->
 
-                            <h4>Total : <span class="total-price">0</span> $</h4>
-                            <h4>Total in LBP : <span class="total-price-lbp">0</span> LBP</h4>
+                            <div class="d-flex mb-3">
+                                <h4 class="my-auto">Total Price :</h4>
+                                <input type="number" class="total-price form-control mx-3" value="0" style="width: 100px" name="total_price">
+                                <span class="my-auto">$</span>
+                            </div>
+                            {{-- <h4>Total : <span class="total-price">0</span> $</h4>
+                            <h4>Total in LBP : <span class="total-price-lbp">0</span> LBP</h4> --}}
 
                             <button class="btn btn-primary btn-block disabled my-3" id="add-order-form-btn"><i
                                     class="fa fa-plus"></i> Add Order</button>
@@ -164,7 +179,7 @@
 
 </div><!-- end of content wrapper -->
 
-<script>
+{{-- <script>
     // disable enter key
     $(document).ready(function() {
         $(window).keydown(function(event){
@@ -174,6 +189,6 @@
             }
         });
     });
-</script>
+</script> --}}
 
 @endsection

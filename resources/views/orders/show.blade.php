@@ -29,6 +29,7 @@
                                 <thead>
                                     <tr class="text-capitalize">
                                         <th class="text-left" style="width: 45%; min-width: 130px;">Product</th>
+                                        <th>Type</th>
                                         <th>Quantity</th>
                                         <th style="min-width: 100px">Unit Cost</th>
                                         <th>total</th>
@@ -37,15 +38,19 @@
                                 <tbody>
                                     @foreach ($order->products as $product)
                                     <tr>
-                                        <td class="text-left">{{ucfirst($product->name)}}</td>
-                                        <td>{{number_format($product->pivot->quantity)}}</td>
+                                        <td class="text-left">{{ucfirst($product->name)}} {{ $product->pivot->size }}</td>
+                                        <td>{{ $product->pivot->type }}</td>
+                                        <td>{{number_format($product->pivot->quantity)}}pcs 
+                                        @if ($product->pivot->months != 0)
+                                        {{ $product->pivot->months }}months
+                                        @endif
+                                        </td>
                                         <td>
                                             @if (Helper::is_active('LBP') )
                                             @if ($product->pivot->type == 'buy')
-                                            {{number_format(Helper::convert('LBP', $product->sell_price *
-                                            $product->pivot->quantity))}} LBP
+                                            {{number_format(Helper::convert('LBP', $product->sell_price))}} LBP
                                             @elseif ($product->pivot->type == 'rent')
-                                            {{number_format(Helper::convert('LBP', $product->rent_price))}} LBP
+                                            {{number_format(Helper::convert('LBP', $product->rent_price * $product->pivot->months))}} LBP
                                             @endif
                                             @else
                                             @if ($product->pivot->type == 'buy')
@@ -62,14 +67,14 @@
                                             $product->pivot->quantity))}} LBP
                                             @elseif ($product->pivot->type == 'rent')
                                             {{number_format(Helper::convert('LBP', $product->rent_price *
-                                            $product->pivot->quantity), 2)}} LBP
+                                            $product->pivot->quantity * $product->pivot->months), 2)}} LBP
                                             @endif
                                             @else
                                             @if ($product->pivot->type == 'buy')
                                             {{number_format($product->sell_price *
                                             $product->pivot->quantity, 2)}} $
                                             @elseif ($product->pivot->type == 'rent')
-                                            {{number_format($product->rent_price * $product->pivot->quantity, 2)}} $
+                                            {{number_format($product->rent_price * $product->pivot->quantity * $product->pivot->months, 2)}} $
                                             @endif
                                             @endif
                                         </td>

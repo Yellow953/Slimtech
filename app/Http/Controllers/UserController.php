@@ -49,7 +49,7 @@ class UserController extends Controller
             $user->save();
             return redirect('/users')->with('success', 'User created successfully');
         } else {
-            return redirect('/user/new')->with('danger', 'User cannot be created');
+            return redirect('/users/new')->with('danger', 'User cannot be created');
         }
     }
 

@@ -15,6 +15,8 @@ return new class extends Migration {
             $table->string('type')->default('buy');
             $table->datetime('rented_at')->nullable();
             $table->datetime('rented_untill')->nullable();
+            $table->string('size')->nullable();
+            $table->unsignedInteger('months')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');

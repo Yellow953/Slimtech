@@ -3,7 +3,6 @@
 namespace App\Helpers;
 
 use App\Models\Currency;
-use App\Models\Cart;
 use App\Models\Product;
 
 class Helper
@@ -40,7 +39,12 @@ class Helper
 
     public static function cart_count()
     {
-        return Cart::where('user_id', auth()->user()->id)->count();
+        try {
+            $cartItems = json_decode($_COOKIE['cart'], true) ?? [];
+            return count($cartItems);
+        } catch (\Throwable $th) {
+            return 0;
+        }
     }
 
     public static function get_product($id)

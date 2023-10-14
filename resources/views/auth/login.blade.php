@@ -41,6 +41,9 @@
             <div class="login-box ptb--100">
                 <form method="POST" action="{{ route('login') }}" class="login-form" style="background: transparent">
                     @csrf
+                    
+                    @include('admin._flash')
+
                     <div class="login-form-head"
                         style="border-radius: 25px 25px 0 0; border: 1px black solid; border-bottom: none;">
                         <h4>Login</h4>

@@ -2,6 +2,14 @@
 
 @section('content')
 
+<script src="{{asset('/admin/js/order.js')}}"></script>
+
+<style>
+    .table td, th{
+        width: 100px
+    }
+</style>
+
 <div class="content-wrapper m-3">
 
     <section class="content-header d-flex justify-content-between my-3">
@@ -19,7 +27,7 @@
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <div class="box box-primary">
 
@@ -100,7 +108,7 @@
 
             </div><!-- end of col -->
 
-            <div class="col-md-6">
+            <div class="col-md-7">
 
                 <div class="box box-primary">
 
@@ -112,7 +120,7 @@
 
                     <div class="box-body">
 
-                        <form action="/order/{{$order->id}}/update" method="post">
+                        <form action="/orders/{{$order->id}}/update" method="post">
 
                             {{ csrf_field() }}
                             <div class="row my-4">
@@ -120,7 +128,7 @@
                                     <label for="user_id" class="mt-1">User</label>
                                 </div>
                                 <div class="col-9">
-                                    <select name="user_id" id="user_id" required class="form-control">
+                                    <select name="user_id" id="user_id" required class="form-control py-0">
                                         @foreach ($users as $user)
                                         <option value="{{$user->id}}" {{$order->user_id == $user->id ? 'selected' :
                                             ''}}>{{$user->name}}</option>
@@ -133,8 +141,10 @@
                                 <thead>
                                     <tr>
                                         <th>Product</th>
+                                        <th>Size</th>
                                         <th>Quantity</th>
                                         <th>Type</th>
+                                        <th>Months</th>
                                         <th>Price</th>
                                     </tr>
                                 </thead>
@@ -144,24 +154,39 @@
                                     @foreach ($order->products as $product)
                                     <tr>
                                         <td>{{ ucfirst($product->name) }}</td>
+                                        <td>
+                                            <select name="products[{{ $product->id }}][size]" class="form-control py-0" data-size="{{ $product->pivot->size }}">
+                                                <option value=""></option>
+                                                <option value="XXS" {{ $product->pivot->size == "XXS" ? 'selected' : ''}}>XXS</option>
+                                                <option value="XS" {{ $product->pivot->size == "XS" ? 'selected' : ''}}>XS</option>
+                                                <option value="S" {{ $product->pivot->size == "S" ? 'selected' : ''}}>S</option>
+                                                <option value="M" {{ $product->pivot->size == "M" ? 'selected' : ''}}>M</option>
+                                                <option value="L" {{ $product->pivot->size == "L" ? 'selected' : ''}}>L</option>
+                                                <option value="XL" {{ $product->pivot->size == "XL" ? 'selected' : ''}}>XL</option>
+                                                <option value="XXL" {{ $product->pivot->size == "XXL" ? 'selected' : ''}}>XXL</option>
+                                                <option value="3XL" {{ $product->pivot->size == "3XL" ? 'selected' : ''}}>3XL</option>
+                                                <option value="4XL" {{ $product->pivot->size == "4XL" ? 'selected' : ''}}>4XL</option>
+                                            </select>
+                                        </td>
                                         <td><input type="number" name="products[{{ $product->id }}][quantity]"
                                                 data-price="{{ number_format($product->sell_price, 2) }}"
-                                                class="form-control input-sm product-quantity" min="1"
+                                                class="form-control" min="1"
                                                 value="{{ $product->pivot->quantity }}"></td>
                                         <td>
                                             <select name="products[{{ $product->id }}][type]"
-                                                class="form-control input-sm product-type">
+                                                class="form-control py-0">
                                                 <option value="buy" {{$product->pivot->type == 'buy' ? 'selected' :
                                                     ''}}>Buy</option>
                                                 <option value="rent" {{$product->pivot->type == 'rent' ? 'selected' :
-                                                    ''}}>Rent</option>
+                                                    ''}} data-rent-price="{{ $product->rent_price }}">Rent</option>
                                             </select>
                                         </td>
+                                        <td><input type="number" name="products[{{ $product->id }}][months]" class="form-control" step="1" min="1" value="{{ $product->pivot->months }}"></td>
                                         <td class="product-price">
                                             @if ($product->pivot->type == 'buy')
-                                            {{number_format($product->sell_price * $product->pivot->quantity, 2)}} $
+                                            {{number_format($product->sell_price, 2)}} $
                                             @elseif($product->pivot->type == 'rent')
-                                            {{number_format($product->rent_price * $product->pivot->quantity, 2)}} $
+                                            {{number_format($product->rent_price, 2)}} $
                                             @endif
                                         </td>
                                         <td>
@@ -175,12 +200,14 @@
 
                             </table><!-- end of table -->
 
-                            <h4>Total Price : <span class="total-price">
-                                    {{number_format($order->total_price, 2)}} $
-                                </span></h4>
-                            <h4>Total Price in LBP : <span class="total-price">
+                            <div class="d-flex mb-3">
+                                <h4 class="my-auto">Total Price :</h4>
+                                <input type="number" class="total-price form-control mx-3" value="{{number_format($order->total_price, 2)}}" style="width: 100px" name="total_price">
+                                <span class="my-auto">$</span>
+                            </div>
+                            {{-- <h4>Total Price in LBP : <span class="total-price">
                                     {{number_format(Helper::convert('LBP', $order->total_price))}} LBP
-                                </span></h4>
+                                </span></h4> --}}
 
                             <button class="btn btn-primary btn-block" id="form-btn">Save</button>
 
@@ -197,16 +224,4 @@
     </section><!-- end of content -->
 
 </div><!-- end of content wrapper -->
-
-<script>
-    // disable enter key
-    $(document).ready(function() {
-        $(window).keydown(function(event){
-            if(event.keyCode == 13) {
-            event.preventDefault();
-            return false;
-            }
-        });
-    });
-</script>
 @endsection

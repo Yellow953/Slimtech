@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  //add product btn
+  // Add product btn
   $(".add-product-btn").on("click", function (e) {
     e.preventDefault();
     var name = $(this).data("name");
@@ -8,107 +8,103 @@ $(document).ready(function () {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
+    var rentPrice = parseFloat($(this).data("rent-price")).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
 
     $(this).removeClass("btn-success").addClass("btn-default disabled");
 
-    var html = `<tr>
-                <td>${name}</td>
-                <td><input type="number" name="products[${id}][quantity]" data-price="${price}" class="form-control input-sm product-quantity" min="1" value="1"></td>
-                <td>
-                <select name="products[${id}][type]" class='form-control input-sm product-type'>
-                  <option value='buy'>Buy</option>
-                  <option value='rent'>Rent</option>
-                </select>
-                </td>
-                <td class="product-price">${price}</td>               
-                <td><button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}"><span class="fa fa-trash"></span></button></td>
-            </tr>`;
+    var html = `
+      <tr>
+        <td>${name}</td>
+        <td>
+          <select name="products[${id}][size]" class="form-control py-0">
+            <option value=""></option>  
+            <option value="XXS">XXS</option>
+            <option value="XS">XS</option>
+            <!-- Add more options as needed -->
+          </select>
+        </td>
+        <td>
+          <input type="number" name="products[${id}][quantity]" data-price="${price}" class="form-control" min="1" value="1">
+        </td>
+        <td>
+          <select name="products[${id}][type]" class="form-control py-0">
+            <option value="buy">Buy</option>
+            <option value="rent" data-rent-price="${rentPrice}">Rent</option>
+          </select>
+        </td>
+        <td>
+          <input type="number" name="products[${id}][months]" class="form-control" step="1" min="1" value="1">
+        </td>
+        <td class="product-price">${price}</td>
+        <td>
+          <button class="btn btn-danger btn-sm remove-product-btn" data-id="${id}">
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>`;
 
     $(".order-list").append(html);
 
-    //to calculate total price
+    // Calculate total price
     calculateTotal();
   });
 
-  //disabled btn
-  $("body").on("click", ".disabled", function (e) {
-    e.preventDefault();
-  }); //end of disabled
-
-  //remove product btn
+  // Remove product btn
   $("body").on("click", ".remove-product-btn", function (e) {
     e.preventDefault();
     var id = $(this).data("id");
-
     $(this).closest("tr").remove();
-    $("#product-" + id)
-      .removeClass("btn-default disabled")
-      .addClass("btn-success");
-
-    //to calculate total price
+    $("#product-" + id).removeClass("btn-default disabled").addClass("btn-success");
     calculateTotal();
-  }); //end of remove product btn
+  });
 
-  //change product quantity
-  $("body").on("keyup change", ".product-quantity", function () {
-    var quantity = Number($(this).val()); //2
-    var unitPrice = parseFloat($(this).data("price").replace(/,/g, ""));
-    $(this)
-      .closest("tr")
-      .find(".product-price")
-      .html(
-        (quantity * unitPrice).toLocaleString(undefined, {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        })
-      );
+  // Update the total price based on quantity, months, or type changes
+  $("body").on("keyup change", ".form-control[name$='[quantity]'], .form-control[name$='[months]'], .form-control[name$='[type]']", function () {
+    updateProductPriceBasedOnType($(this));
     calculateTotal();
-  }); //end of product quantity change
+  });
+});
 
-  //list all order products
-  $(".order-products").on("click", function (e) {
-    e.preventDefault();
+function updateProductPriceBasedOnType(input) {
+  var unitPrice;
+  var selectedType = input.closest("tr").find("[name$='[type]']").val();
 
-    $("#loading").css("display", "flex");
+  if (selectedType === 'rent') {
+    unitPrice = parseFloat(input.closest("tr").find("[name$='[type]'] option:selected").data('rent-price')) || 0;
+  } else {
+    unitPrice = parseFloat(input.closest("tr").find("[name$='[quantity]']").data('price')) || 0;
+  }
 
-    var url = $(this).data("url");
-    var method = $(this).data("method");
-    $.ajax({
-      url: url,
-      method: method,
-      success: function (data) {
-        $("#loading").css("display", "none");
-        $("#order-product-list").empty();
-        $("#order-product-list").append(data);
-      },
-    });
-  }); //end of order products click
-}); //end of document ready
+  var quantity = Number(input.closest("tr").find("[name$='[quantity]']").val()) || 0;
+  var months = Number(input.closest("tr").find("[name$='[months]']").val()) || 0;
+  var totalPrice = (quantity * unitPrice * months).toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
-//calculate the total
+  input.closest("tr").find(".product-price").html(totalPrice);
+}
+
 function calculateTotal() {
   var price = 0;
 
-  $(".order-list .product-price").each(function (index) {
+  $(".order-list .product-price").each(function () {
     price += parseFloat($(this).html().replace(/,/g, ""));
-  }); //end of product price
+  });
 
-  $(".total-price").html(
-    price.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    })
-  );
+  // Update the total price input field
+  $(".total-price").val(price.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }));
 
-  var currency = parseInt(
-    document.getElementById("currency").innerHTML.replace(/,/g, "")
-  );
-  $(".total-price-lbp").html((price * currency).toLocaleString(undefined));
-
-  //check if price > 0
+  // Check if price > 0
   if (price > 0) {
-    $("#add-order-form-btn").removeClass("disabled");
+    $("#form-btn").removeClass("disabled");
   } else {
-    $("#add-order-form-btn").addClass("disabled");
-  } //end of else
-} //end of calculate total
+    $("#form-btn").addClass("disabled");
+  }
+}

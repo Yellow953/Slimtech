@@ -217,10 +217,7 @@ input,
 optgroup,
 select,
 textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    line-height: auto !important;
 }
 button,
 input {
@@ -8879,7 +8876,6 @@ a.text-dark:hover {
     list-style-type: none;
 }
 .footer,
-.page-header,
 .subscribe {
     background-position:center;
     background-repeat: no-repeat;

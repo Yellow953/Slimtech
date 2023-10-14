@@ -1,26 +1,35 @@
 @extends('admin.app')
 
 @section('content')
-<a href="/app" class="btn text-secondary">
-    <h3>
-        < back</h3>
-</a>
+<div class="container">
+    <a href="/app" class="btn text-secondary">
+        <h3>
+            < back</h3>
+    </a>
 
-<div class="card m-3">
-    <div class="card-body">
-        <h4 class="header-title">Edit {{ucwords($currency->name)}}</h4>
-        <p class="text-right my-2">Current Rate : {{number_format($currency->rate, 2)}}</p>
-        <form method="POST" action="/currency/update" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-                <label for="rate" class="col-form-label">Rate *</label>
-                <input class="form-control input-rounded" name="rate" required type="number" value="{{$currency->rate}}"
-                    step="0.1">
+    <div class="row mt-3">
+        <div class="offset-md-2 col-md-8">
+            <div class="card border">
+                <div class="card-header bg-primary">
+                    <h2 class="font-weight-bolder text-center my-4">Edit {{ucwords($currency->name)}}</h2>
+                </div>
+                <div class="card-body">
+                    <p class="text-center my-2">Current Rate : {{number_format($currency->rate, 2)}}</p>
+                    <form method="POST" action="/currency/update" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="rate" class="col-form-label">Rate *</label>
+                            <input class="form-control input-rounded" name="rate" required type="number" value="{{$currency->rate}}"
+                                step="0.1">
+                        </div>
+            
+                        <div class="w-100 mt-5">
+                            <button type="submit" class="btn btn-primary w-100">Update</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="w-100 d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary btn-rounded">Update</button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 @endsection

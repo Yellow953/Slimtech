@@ -38,8 +38,6 @@
 </div>
 <!-- Carousel End -->
 
-
-
 <!-- Gym Class Start -->
 <div class="container gym-class mb-5">
     <div class="row px-3">
@@ -61,8 +59,8 @@
                 class="gym-class-box d-flex flex-column align-items-center align-items-md-start justify-content-center bg-secondary text-center text-md-left text-white py-5 px-5">
                 <h3 class="display-4 mb-3 text-white font-weight-bold">Training Center</h3>
                 <p>
-                    We also offer our training center space for
-                    personalized sessions and workouts, expert guidance, and achieving your fitness aspirations. Whether
+                    We also offer our training center for
+                    personalized sessions, to achieve your fitness goals. Whether
                     you're a
                     beginner or an experienced athlete, our certified trainers and specialized equipment are there
                     to help you reach your fitness goals. You can also rent an EMS suit and train here...
@@ -302,13 +300,12 @@ url({{asset('assets/images/pic8.png')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-1.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
+                                        <h4 class="text-info">Mark Davis</h4>
+                                        <p class="m-0">Fitness Enthusiast</p>
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    I can't believe the results I've seen with EMS suits! They've taken my workouts to a whole new level, sculpting my muscles and boosting my strength in just a few sessions. Highly recommend!
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -316,13 +313,12 @@ url({{asset('assets/images/pic8.png')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-2.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
+                                        <h4 class="text-info">David Miller</h4>
+                                        <p class="m-0">Personal Trainer</p>
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    Using EMS suits has been a game-changer for my fitness journey. The intensity and efficiency of the workouts are unmatched. I've never felt more toned and energized. Thank you for this incredible innovation!
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -330,13 +326,12 @@ url({{asset('assets/images/pic8.png')}});">
                                     <img width="80" height="80" class="rounded-circle bg-dark p-2"
                                         src="{{asset('assets/images/testimonial-3.jpg')}}" alt="Image">
                                     <div class="pl-4">
-                                        <h4 class="text-info">Client Name</h4>
-                                        <p class="m-0">Profession</p>
+                                        <h4 class="text-info">John Anderson</h4>
+                                        <p class="m-0">Gym Owner</p>
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod
-                                    clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    EMS suits have revolutionized my approach to fitness. The convenience and effectiveness are unparalleled. I've experienced a significant improvement in muscle definition and overall endurance. Definitely a must-try for anyone serious about their workouts
                                 </div>
                             </div>
                         </div>
@@ -741,32 +736,23 @@ url({{asset('assets/images/pic8.png')}});">
         <h4 class="display-4 font-weight-bold">Contact Us For More Informations</h4>
     </div>
     <div class="row px-3 pb-2">
-        <div class="col-sm-3 text-center mb-3">
-            <i class="fa fa-2x fa-map-marker-alt mb-3 text-info"></i>
-            <h4 class="font-weight-bold">Address</h4>
-            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Paris, France</a> <br>
-            <a class="text-gray" target="_blank" href="https://www.maps.google.com">123 Street, Beirut, Lebanon</a>
+        <div class="col-md-4 text-center mb-3">
+            <a href="tel:96170580898" class="nav-link">
+                <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
+                <h4 class="font-weight-bold">Phone</h4>
+            </a>
         </div>
-        <div class="col-sm-3 text-center mb-3">
-            <i class="fa fa-2x fa-phone-alt mb-3 text-info"></i>
-            <h4 class="font-weight-bold">Phone</h4>
-            <a class="text-gray" href="tel:96170580898" title="Click to Call">+961 70 580 898</a> <br>
-            <a class="text-gray" href="tel:96170580898" title="Click to Call">+961 70 580 898</a>
+        <div class="col-md-4 text-center mb-3">
+            <a href="https://api.whatsapp.com/send/?phone=96170580898" class="nav-link">
+                <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
+                <h4 class="font-weight-bold">Whatsapp</h4>
+            </a>
         </div>
-        <div class="col-sm-3 text-center mb-3">
-            <i class="fab fa-whatsapp fa-2x mb-3 text-info"></i>
-            <h4 class="font-weight-bold">Whatsapp</h4>
-            <a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-gray" target="_blank"
-                title="Click to Whatsapp">+961 76
-                656 054</a> <br>
-            <a href="https://api.whatsapp.com/send/?phone=96170580898" class="text-gray" target="_blank"
-                title="Click to Whatsapp">+961 76
-                656 054</a>
-        </div>
-        <div class="col-sm-3 text-center mb-3">
-            <i class="far fa-2x fa-envelope mb-3 text-info"></i>
-            <h4 class="font-weight-bold">Email</h4>
-            <a href="mailto:info@slimtech.com" title="Click to Email" class="text-gray">info@slimtech.com</a>
+        <div class="col-md-4 text-center mb-3">
+            <a href="mailto:info@slimtech.com" class="nav-link">
+                <i class="far fa-2x fa-envelope mb-3 text-info"></i>
+                <h4 class="font-weight-bold">Email</h4>
+            </a>
         </div>
     </div>
 </div>

@@ -6,11 +6,11 @@
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-url({{asset('assets/images/logo.png')}}); background-size: contain;">
+url({{asset('assets/images/logo.png')}});">
     <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
         <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">About</h4>
         <div class="d-inline-flex">
-            <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+            <p class="m-0 text-white"><a class="text-white" href="/">Home</a></p>
             <p class="m-0 text-white px-2">/</p>
             <p class="m-0 text-white">About</p>
         </div>
@@ -114,55 +114,13 @@ url({{asset('assets/images/logo.png')}}); background-size: contain;">
 
 
 <div class="container my-3">
-    <h2 class="mt-5">Main Branch</h2>
-    <div class="row m-3 m-md-5">
-        <div class="col-md-3 my-auto">
-            <img src="https://assets.website-files.com/61a7bda474dfe11266bb0b74/61cccbf73186dfc0dc8e9961_Locations%20.png"
-                alt="" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-9 my-auto p-3 p-md-1">
-            <h3 class="mt-3">SlimTech, France</h3>
-            <p class="my-3">
-                Our main branch is located in france, paris, rue 335. <br>
-                In this location, we have a training center where you can use our EMS suits and train... Also this is
-                the main supplier to all the other branches... <br><br>
-                We are waiting for you !!!
-            </p>
-        </div>
-    </div>
-
-    <h3 class="mt-5">Sellers And Branches</h3>
     <div class="row">
-        <div class="col-md-6">
-            <div class="row m-3 m-md-5">
-                <div class="col-md-6 my-auto">
-                    <img src="https://assets.website-files.com/61a914abfd1d953ff6a7154f/61ca2efde49c24ef8d21a764_olivebranch_1-thumb7.jpg"
-                        alt="" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 my-auto p-3 p-md-1">
-                    <h4 class="mt-3">SlimTech, USA</h4>
-                    <p class="my-3">
-                        Join us in our USA branch and enjoy all the perks...
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="row m-3 m-md-5">
-                <div class="col-md-6 my-auto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSAhrFHnc4JDX5eiDfLvy40Dxzrfl9lj-sTFoiAQlEVdAF0kym_CgVK6sT_Iz9aSq6w5s&usqp=CAU"
-                        alt="" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 my-auto p-3 p-md-1">
-                    <h4 class="mt-3">SlimTech, lebanon</h4>
-                    <p class="my-3">
-                        Join us in our Lebanon branch and enjoy all the perks...
-                    </p>
-                </div>
-            </div>
+        <div class="col-md-12 m-md-5 mt-md-0 p-md-5 pt-md-0">
+            <h2 class="text-center text-info">SlimTech's suppliers and access in the world</h2>
+            <img src="{{asset('assets/images/map.png')}}" class="img-fluid w-100" alt="">
+            <p class="text-center text-secondary">Contact us to get access to our cutting egde EMS suits and accessories all over the world. <br> Or get in touch with one of our trusted suppliers...</p>
         </div>
     </div>
-
 </div>
 
 @include('layouts._footer')

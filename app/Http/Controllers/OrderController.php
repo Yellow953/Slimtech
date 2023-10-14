@@ -26,10 +26,9 @@ class OrderController extends Controller
     public function new()
     {
         $categories = Category::with('products')->get();
-        $orders = Order::paginate(5);
         $users = User::all();
 
-        $data = compact('categories', 'orders', 'users');
+        $data = compact('categories', 'users');
         return view('orders.new', $data);
 
     } //end of new
@@ -57,10 +56,9 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
         $categories = Category::with('products')->get();
-        $orders = Order::paginate(5);
         $users = User::all();
 
-        $data = compact('categories', 'orders', 'order', 'users');
+        $data = compact('categories', 'order', 'users');
         return view('orders.edit', $data);
 
     } //end of edit
@@ -96,33 +94,36 @@ class OrderController extends Controller
         $text = "Order " . $order->id . " : ";
         $total_price = 0;
 
-        foreach ($request->products as $id => $quantity) {
-            if ($quantity['quantity'] <= 0) {
+        foreach ($request->products as $id => $item) {
+            if ($item['quantity'] <= 0) {
                 return redirect()->back()->with('danger', 'Negative Values...');
             }
 
             $product = Product::FindOrFail($id);
-            $text .= $product->name . " : " . $quantity['quantity'] . " , ";
+            $text .= $product->name . " : " . $item['quantity'] . " , ";
 
-            if ($quantity['type'] == 'buy') {
-                $total_price += $product->sell_price * $quantity['quantity'];
+            if ($item['type'] == 'buy') {
+                $total_price += $product->sell_price * $item['quantity'];
                 $order->products()->attach([
                     $id => [
-                        'quantity' => $quantity['quantity'],
-                        'type' => $quantity['type'],
+                        'quantity' => $item['quantity'],
+                        'type' => $item['type'],
+                        'size' => $item['size'],
                     ]
                 ]);
-            } elseif ($quantity['type'] == 'rent') {
-                $total_price += $product->rent_price * $quantity['quantity'];
+            } elseif ($item['type'] == 'rent') {
+                $total_price += $product->rent_price * $item['quantity'] * $item['months'];
 
                 // Add rented_at and rented_until for "rent" products
                 $rented_at = Carbon::now();
-                $rented_untill = $rented_at->copy()->addMonth();
+                $rented_untill = $rented_at->copy()->addMonth($item['months']);
 
                 $order->products()->attach([
                     $id => [
-                        'quantity' => $quantity['quantity'],
-                        'type' => $quantity['type'],
+                        'quantity' => $item['quantity'],
+                        'type' => $item['type'],
+                        'size' => $item['size'],
+                        'months' => $item['months'],
                         'rented_at' => $rented_at,
                         'rented_untill' => $rented_untill,
                     ]
@@ -130,15 +131,15 @@ class OrderController extends Controller
             }
 
             $product->update([
-                'quantity' => $product->quantity - $quantity['quantity']
+                'quantity' => $product->quantity - $item['quantity']
             ]);
 
         } //end of foreach
 
         $order->update([
-            'total_price' => $total_price
+            'total_price' => $request->total_price
         ]);
-        $text .= " total price : " . $total_price;
+        $text .= " total price : " . $request->total_price;
 
         $text .= ", datetime: " . now();
         Log::create(['text' => $text]);
