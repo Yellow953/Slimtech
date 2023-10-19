@@ -32,32 +32,32 @@ url({{asset('assets/images/logo.png')}});">
             @forelse ($cart_items as $productID => $cart_item)
             <div class="cartItem row align-items-start">
                 @php
-                    $product = Helper::get_product($productID);
+                $product = Helper::get_product($productID);
                 @endphp
-                    
+
                 <div class="col-2 my-auto">
                     <img class="w-100 cart_image rounded" src="{{ asset($product->image) }}" alt="Image">
                 </div>
                 <div class="col-3 my-auto">
-                    <h6>{{ ucwords($product->name) }} {{ $cart_item['size'] }}</h6>
+                    <h6>{{ ucwords($product->name) }}</h6>
                 </div>
                 <div class="col-3 my-auto">
-                      {{ ucwords($cart_item['type']) }}
+                    {{ ucwords($cart_item['type']) }}
                 </div>
                 <div class="col-2 my-auto">
                     <span id="cartItemQuantity">{{ $cart_item['quantity'] }}</span>pcs <br>
                     @if ($cart_item['type'] == 'rent')
-                        {{ $cart_item['months'] }}month(s)
+                    {{ $cart_item['months'] }}month(s)
                     @endif
                 </div>
                 <div class="col-2 my-auto">
                     <span id="cartItem{{ $productID }}Price">
                         @if ($cart_item['type'] == 'buy')
-                            ${{ number_format($product->sell_price *
-                            $cart_item['quantity'], 2) }}
+                        ${{ number_format($product->sell_price *
+                        $cart_item['quantity'], 2) }}
                         @elseif ($cart_item['type'] == 'rent')
-                            ${{ number_format($product->rent_price *
-                            $cart_item['quantity'] * $cart_item['months'], 2) }}
+                        ${{ number_format($product->rent_price *
+                        $cart_item['quantity'] * $cart_item['months'], 2) }}
                         @endif
                     </span>
                 </div>
@@ -65,7 +65,7 @@ url({{asset('assets/images/logo.png')}});">
             <hr>
             @empty
             <div class="my-3">No Items Yet</div>
-            @endforelse  
+            @endforelse
             <form action="/checkout" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row my-3 text-center">
@@ -81,7 +81,8 @@ url({{asset('assets/images/logo.png')}});">
                         Promo:
                     </div>
                     <div class="col-6 col-md-3">
-                        <input type="text" name="promo" id="promo" style="width: 125px; height: 35px"><a id="apply" class="text-info size-2 mx-3">Apply</a>
+                        <input type="text" name="promo" id="promo" style="width: 125px; height: 35px"><a id="apply"
+                            class="text-info size-2 mx-3">Apply</a>
                         <span id="promoValue"></span>
                     </div>
                 </div>

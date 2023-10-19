@@ -3,7 +3,9 @@
 namespace App\Helpers;
 
 use App\Models\Currency;
+use App\Models\Order;
 use App\Models\Product;
+use App\Models\Purchase;
 
 class Helper
 {
@@ -50,5 +52,15 @@ class Helper
     public static function get_product($id)
     {
         return Product::find($id);
+    }
+
+    public static function count_new_orders()
+    {
+        return Order::where('status', 'new')->count();
+    }
+
+    public static function count_new_purchases()
+    {
+        return Purchase::where('status', 'new')->count();
     }
 }

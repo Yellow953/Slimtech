@@ -26,7 +26,13 @@
                             <input class="form-control" name="description" type="text"
                                 placeholder="Category Description" value="{{old('description')}}">
                         </div>
-            
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input id="allow_rent" class="form-check-input" name="allow_rent" type="checkbox">
+                                <label class="form-check-label" for="allow_rent">Allow Rent</label>
+                            </div>
+                        </div>
+
                         <div class="w-100 mt-5">
                             <button type="submit" class="btn btn-primary w-100">Create</button>
                         </div>

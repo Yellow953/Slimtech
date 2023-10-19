@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -33,11 +33,9 @@ class HomeController extends Controller
 
     public function shop()
     {
-        $ems = Product::where('category_id', 1)->get();
-        $products = Product::where('category_id', 2)->get();
-        $services = Product::where('category_id', 3)->get();
+        $categories = Category::select('id', 'name', 'allow_rent')->where('active', true)->get();
 
-        $data = compact('ems', 'products', 'services');
+        $data = compact('categories');
         return view('shop', $data);
     }
 
@@ -86,5 +84,4 @@ class HomeController extends Controller
             return redirect()->back()->with('danger', "Passwords do not match!");
         }
     }
-
 }

@@ -2834,3 +2834,18 @@ table.dataTable thead td {
     width: 75px;
     height: auto;
 }
+
+.rounded-full{
+    border-radius: 50%;
+    padding: 4px 10px;
+    line-height: 1;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    margin-right: 10px; /* Adjust margin to control spacing between checkbox and label */
+}

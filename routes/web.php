@@ -69,6 +69,7 @@ Route::prefix('/categories')->group(function () {
     Route::get('/{id}/edit', [App\Http\Controllers\CategoryController::class, 'edit']);
     Route::post('/{id}/update', [App\Http\Controllers\CategoryController::class, 'update']);
     Route::get('/{id}/destroy', [App\Http\Controllers\CategoryController::class, 'destroy']);
+    Route::get('/{id}/switch', [App\Http\Controllers\CategoryController::class, 'switch']);
     Route::get('/', [App\Http\Controllers\CategoryController::class, 'index']);
 });
 
@@ -80,11 +81,9 @@ Route::prefix('/products')->group(function () {
     Route::post('/create', [App\Http\Controllers\ProductController::class, 'create']);
     Route::get('/{id}/edit', [App\Http\Controllers\ProductController::class, 'edit']);
     Route::post('/{id}/update', [App\Http\Controllers\ProductController::class, 'update']);
-    Route::get('/{id}/import', [App\Http\Controllers\ProductController::class, 'import']);
-    Route::post('/{id}/save', [App\Http\Controllers\ProductController::class, 'save']);
     Route::get('/{id}/rent', [App\Http\Controllers\ProductController::class, 'rent']);
     Route::post('/{id}/rent_save', [App\Http\Controllers\ProductController::class, 'rent_save']);
-    Route::get('/{id}/destroy', [App\Http\Controllers\ProductController::class, 'destroy']);   
+    Route::get('/{id}/destroy', [App\Http\Controllers\ProductController::class, 'destroy']);
     Route::get('/{id}/secondary_images', [App\Http\Controllers\ProductController::class, 'secondary_images_index']);
     Route::get('/', [App\Http\Controllers\ProductController::class, 'index']);
 });
@@ -104,6 +103,18 @@ Route::prefix('/orders')->group(function () {
     Route::post('/create', [App\Http\Controllers\OrderController::class, 'create']);
     Route::post('/checkout', [App\Http\Controllers\HomeController::class, 'checkout']);
     Route::get('/', [App\Http\Controllers\OrderController::class, 'index']);
+});
+
+// Purchases
+Route::prefix('/purchases')->group(function () {
+    Route::get('/{id}/complete', [App\Http\Controllers\PurchaseController::class, 'complete']);
+    Route::get('/{id}/edit', [App\Http\Controllers\PurchaseController::class, 'edit']);
+    Route::post('/{id}/update', [App\Http\Controllers\PurchaseController::class, 'update']);
+    Route::get('/{id}/destroy', [App\Http\Controllers\PurchaseController::class, 'destroy']);
+    Route::get('/{id}/show', [App\Http\Controllers\PurchaseController::class, 'show']);
+    Route::get('/new', [App\Http\Controllers\PurchaseController::class, 'new']);
+    Route::post('/create', [App\Http\Controllers\PurchaseController::class, 'create']);
+    Route::get('/', [App\Http\Controllers\PurchaseController::class, 'index']);
 });
 
 // Promo

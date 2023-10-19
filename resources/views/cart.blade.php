@@ -46,50 +46,50 @@ url({{asset('assets/images/logo.png')}});">
             </div>
             <hr>
             @forelse ($cart_items as $productID => $cart_item)
-                <div class="cartItem row align-items-start" id="cartItem{{ $productID }}">
-                    @php
-                        $product = Helper::get_product($productID);
-                    @endphp
-                    
-                    <div class="col-2 my-auto">
-                        <img class="w-100 cart_image rounded" src="{{ asset($product->image) }}" alt="Image">
-                    </div>
-                    <div class="col-2 my-auto">
-                        <h6>{{ ucwords($product->name) }} {{ $cart_item['size'] }}</h6>
-                    </div>
-                    <div class="col-2 my-auto">
-                        {{ ucwords($cart_item['type']) }}
-                    </div>
-                    <div class="col-2 my-auto">
-                        <span id="cartItemQuantity">{{ $cart_item['quantity'] }}</span>pcs <br>
-                        @if ($cart_item['type'] == 'rent')
-                        {{ $cart_item['months'] }}month(s)
-                        @endif
-                    </div>
-                    <div class="col-2 my-auto">
-                        <span id="cartItem{{ $productID }}Price">
-                            @if ($cart_item['type'] == 'buy')
-                            ${{ number_format($product->sell_price *
-                            $cart_item['quantity'], 2) }}
-                            @elseif ($cart_item['type'] == 'rent')
-                            ${{ number_format($product->rent_price *
-                            $cart_item['quantity'] * $cart_item['months'], 2) }}
-                            @endif
-                        </span>
-                    </div>
-                    <div class="col-2 my-auto">
-                        <a href="#" class="btn btn-danger btn-rounded pt-2" onclick="deleteCartItem({{ $productID }})">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                            </svg>
-                        </a>
-                    </div>
+            <div class="cartItem row align-items-start" id="cartItem{{ $productID }}">
+                @php
+                $product = Helper::get_product($productID);
+                @endphp
+
+                <div class="col-2 my-auto">
+                    <img class="w-100 cart_image rounded" src="{{ asset($product->image) }}" alt="Image">
                 </div>
-                <hr>
+                <div class="col-2 my-auto">
+                    {{ ucwords($product->name) }}
+                </div>
+                <div class="col-2 my-auto">
+                    {{ ucwords($cart_item['type']) }}
+                </div>
+                <div class="col-2 my-auto">
+                    <span id="cartItemQuantity">{{ $cart_item['quantity'] }}</span>pcs <br>
+                    @if ($cart_item['type'] == 'rent')
+                    {{ $cart_item['months'] }}month(s)
+                    @endif
+                </div>
+                <div class="col-2 my-auto">
+                    <span id="cartItem{{ $productID }}Price">
+                        @if ($cart_item['type'] == 'buy')
+                        ${{ number_format($product->sell_price *
+                        $cart_item['quantity'], 2) }}
+                        @elseif ($cart_item['type'] == 'rent')
+                        ${{ number_format($product->rent_price *
+                        $cart_item['quantity'] * $cart_item['months'], 2) }}
+                        @endif
+                    </span>
+                </div>
+                <div class="col-2 my-auto">
+                    <a href="#" class="btn btn-danger btn-rounded pt-2" onclick="deleteCartItem({{ $productID }})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <hr>
             @empty
-                No Items Yet
+            No Items Yet
             @endforelse
             <div class="row my-3 text-center">
                 <div class="offset-md-6 col-6 col-md-3">

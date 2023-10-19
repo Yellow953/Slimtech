@@ -17,10 +17,19 @@
                     <form method="POST" action="/products/{{$product->id}}/rent_save" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
+                            <label for="user_id" class="col-form-label">User *</label>
+                            <select name="user_id" id="user_id" class="custom-select" required>
+                                @foreach ($users as $user)
+                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label for="quantity" class="col-form-label">Quantity *</label>
                             <input class="form-control" name="quantity" required type="number">
                         </div>
-            
+
                         <div class="form-group">
                             <label for="rented_at" class="col-form-label">Rent At *</label>
                             <input class="form-control" name="rented_at" required type="date">
@@ -29,7 +38,7 @@
                             <label for="rented_untill" class="col-form-label">Rent Untill *</label>
                             <input class="form-control" name="rented_untill" required type="date">
                         </div>
-            
+
                         <div class="w-100 mt-5">
                             <button type="submit" class="btn btn-primary w-100">Rent</button>
                         </div>

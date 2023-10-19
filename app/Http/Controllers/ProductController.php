@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Log;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\SecondaryImage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
@@ -132,61 +134,52 @@ class ProductController extends Controller
         return redirect('/products')->with('danger', 'Product was successfully deleted');
     }
 
-    public function import($id)
-    {
-        $product = Product::findOrFail($id);
-        return view('products.import', compact('product'));
-    }
-
-    public function save(Request $request, $id)
-    {
-        $request->validate([
-            'quantity' => 'required|numeric',
-        ]);
-
-        if ($request->quantity <= 0) {
-            return redirect()->back()->with('danger', 'Negative Values...');
-        }
-
-        $product = Product::findOrFail($id);
-
-        $product->quantity += $request->quantity;
-
-        $text = "Product " . $product->name . " import " . $request->quantity . "pcs created, datetime: " . now();
-        Log::create(['text' => $text]);
-
-        $product->save();
-        return redirect('/products')->with('success', 'Product was successfully imported.');
-    }
-
     public function rent($id)
     {
         $product = Product::findOrFail($id);
-        return view('products.rent', compact('product'));
+        $users = User::select('id', 'name')->get();
+
+        $data = compact('product', 'users');
+        return view('products.rent', $data);
     }
 
     public function rent_save(Request $request, $id)
     {
         $request->validate([
+            'user_id' => 'required|numeric',
             'quantity' => 'required|numeric',
+            'rented_at' => 'required|date',
             'rented_untill' => 'required|date',
         ]);
 
-        if ($request->quantity <= 0) {
-            return redirect()->back()->with('danger', 'Negative Values...');
-        }
+        $user = User::findOrFail($request->user_id);
+        $order = $user->orders()->create([]);
+        $product = Product::FindOrFail($id);
 
-        $product = Product::findOrFail($id);
+        $total_price = $product->rent_price * $request->quantity;
 
-        $product->quantity -= $request->quantity;
-        $product->status = "rented";
-        $product->rented_untill = $request->rented_untill;
+        $order->products()->attach([
+            $id => [
+                'quantity' => $request->quantity,
+                'type' => 'rent',
+                'months' => 1,
+                'rented_at' => $request->rented_at,
+                'rented_untill' => $request->rented_untill,
+            ]
+        ]);
 
-        $text = "Product " . $product->name . " rented " . $request->quantity . "pcs created, datetime: " . now();
+        $product->update([
+            'quantity' => $product->quantity - $request->quantity
+        ]);
+
+        $order->update([
+            'total_price' => $total_price
+        ]);
+
+        $text = "Product " . $product->name . " rented " . $request->quantity . "pcs, datetime: " . now();
         Log::create(['text' => $text]);
 
-        $product->save();
-        return redirect('/products')->with('success', 'Product was successfully imported.');
+        return redirect('/products')->with('success', 'Product was successfully rented.');
     }
 
     public function rented()
@@ -196,12 +189,13 @@ class ProductController extends Controller
         return view('products.rented', compact('rentedItems'));
     }
 
-    public function return ($id)
+    public function return($id)
     {
         $product_order = DB::table('product_order')->where('id', $id)->first();
 
         if ($product_order) {
             $product = Product::find($product_order->product_id);
+            $order = Order::find($product_order->order_id);
 
             if ($product) {
                 $product->update([
@@ -214,12 +208,16 @@ class ProductController extends Controller
             Log::create(['text' => $text]);
 
             DB::table('product_order')->where('id', $id)->delete();
+            if ($order->products()->count() == 0) {
+                $order->update([
+                    'status' => 'completed'
+                ]);
+            }
 
             return redirect()->back()->with('danger', 'Product returned successfully from renting...');
         } else {
             return redirect()->back()->with('danger', 'Product not found!');
         }
-
     }
 
     public function secondary_images_index($id)
@@ -269,5 +267,4 @@ class ProductController extends Controller
 
         return redirect()->back()->with('danger', 'Secondary Image deleted...');
     }
-
 }

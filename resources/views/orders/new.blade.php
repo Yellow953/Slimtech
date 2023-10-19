@@ -5,7 +5,8 @@
 <script src="{{asset('/admin/js/order.js')}}"></script>
 
 <style>
-    .table td, th{
+    .table td,
+    th {
         width: 100px
     }
 </style>
@@ -77,7 +78,8 @@
                                                 <td>
                                                     <a href="" id="product-{{ $product->id }}"
                                                         data-name="{{ $product->name }}" data-id="{{ $product->id }}"
-                                                        data-price="{{ $product->sell_price }}" data-rent-price="{{ $product->rent_price }}"
+                                                        data-price="{{ $product->sell_price }}"
+                                                        data-rent-price="{{ $product->rent_price }}"
                                                         class="btn btn-success btn-sm add-product-btn">
                                                         <i class="fa fa-plus"></i>
                                                     </a>
@@ -141,7 +143,6 @@
                                 <thead>
                                     <tr>
                                         <th>Product</th>
-                                        <th>Size</th>
                                         <th>Quantity</th>
                                         <th>Type</th>
                                         <th>Months</th>
@@ -156,7 +157,8 @@
 
                             <div class="d-flex mb-3">
                                 <h4 class="my-auto">Total Price :</h4>
-                                <input type="number" class="total-price form-control mx-3" value="0" style="width: 100px" name="total_price">
+                                <input type="number" class="total-price form-control mx-3" value="0"
+                                    style="width: 100px" name="total_price">
                                 <span class="my-auto">$</span>
                             </div>
                             {{-- <h4>Total : <span class="total-price">0</span> $</h4>

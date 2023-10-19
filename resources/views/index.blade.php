@@ -305,7 +305,9 @@ url({{asset('assets/images/pic8.png')}});">
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    I can't believe the results I've seen with EMS suits! They've taken my workouts to a whole new level, sculpting my muscles and boosting my strength in just a few sessions. Highly recommend!
+                                    I can't believe the results I've seen with EMS suits! They've taken my workouts to a
+                                    whole new level, sculpting my muscles and boosting my strength in just a few
+                                    sessions. Highly recommend!
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -318,7 +320,9 @@ url({{asset('assets/images/pic8.png')}});">
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    Using EMS suits has been a game-changer for my fitness journey. The intensity and efficiency of the workouts are unmatched. I've never felt more toned and energized. Thank you for this incredible innovation!
+                                    Using EMS suits has been a game-changer for my fitness journey. The intensity and
+                                    efficiency of the workouts are unmatched. I've never felt more toned and energized.
+                                    Thank you for this incredible innovation!
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -331,7 +335,10 @@ url({{asset('assets/images/pic8.png')}});">
                                     </div>
                                 </div>
                                 <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
-                                    EMS suits have revolutionized my approach to fitness. The convenience and effectiveness are unparalleled. I've experienced a significant improvement in muscle definition and overall endurance. Definitely a must-try for anyone serious about their workouts
+                                    EMS suits have revolutionized my approach to fitness. The convenience and
+                                    effectiveness are unparalleled. I've experienced a significant improvement in muscle
+                                    definition and overall endurance. Definitely a must-try for anyone serious about
+                                    their workouts
                                 </div>
                             </div>
                         </div>
@@ -753,6 +760,16 @@ url({{asset('assets/images/pic8.png')}});">
                 <i class="far fa-2x fa-envelope mb-3 text-info"></i>
                 <h4 class="font-weight-bold">Email</h4>
             </a>
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-12 m-md-5 mt-md-0 p-md-5 pt-md-0">
+            <h2 class="text-center text-info">SlimTech's suppliers and access in the world</h2>
+            <img src="{{asset('assets/images/map.png')}}" class="img-fluid w-100" alt="">
+            <p class="text-center text-secondary">Contact us to get access to our cutting egde EMS suits and accessories
+                all over the world. <br> Or get in touch with one of our trusted suppliers...</p>
         </div>
     </div>
 </div>

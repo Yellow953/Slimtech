@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     public function up(): void
     {
         Schema::create('product_order', function (Blueprint $table) {
@@ -15,7 +16,6 @@ return new class extends Migration {
             $table->string('type')->default('buy');
             $table->datetime('rented_at')->nullable();
             $table->datetime('rented_untill')->nullable();
-            $table->string('size')->nullable();
             $table->unsignedInteger('months')->nullable();
             $table->timestamps();
 

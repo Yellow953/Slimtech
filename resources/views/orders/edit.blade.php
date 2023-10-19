@@ -5,7 +5,8 @@
 <script src="{{asset('/admin/js/order.js')}}"></script>
 
 <style>
-    .table td, th{
+    .table td,
+    th {
         width: 100px
     }
 </style>
@@ -69,17 +70,17 @@
 
                                             @foreach ($category->products as $product)
                                             <tr>
-                                                <td>{{ ucfirst($product->name) }}</td>
+                                                <td class="word-break">{{ ucfirst($product->name) }}</td>
                                                 <td>{{ number_format($product->quantity) }}</td>
                                                 <td class="min-width-1">
                                                     {{number_format($product->sell_price, 2)}} $
                                                 </td>
-
                                                 <td>
                                                     <a href="" id="product-{{ $product->id }}"
                                                         data-name="{{ $product->name }}" data-id="{{ $product->id }}"
                                                         data-price="{{ $product->sell_price }}"
-                                                        class="btn {{ in_array($product->id, $order->products->pluck('id')->toArray()) ? 'btn-default disabled' : 'btn-success add-product-btn' }} btn-sm">
+                                                        data-rent-price="{{ $product->rent_price }}"
+                                                        class="btn btn-success btn-sm add-product-btn">
                                                         <i class="fa fa-plus"></i>
                                                     </a>
                                                 </td>
@@ -141,7 +142,6 @@
                                 <thead>
                                     <tr>
                                         <th>Product</th>
-                                        <th>Size</th>
                                         <th>Quantity</th>
                                         <th>Type</th>
                                         <th>Months</th>
@@ -154,34 +154,21 @@
                                     @foreach ($order->products as $product)
                                     <tr>
                                         <td>{{ ucfirst($product->name) }}</td>
-                                        <td>
-                                            <select name="products[{{ $product->id }}][size]" class="form-control py-0" data-size="{{ $product->pivot->size }}">
-                                                <option value=""></option>
-                                                <option value="XXS" {{ $product->pivot->size == "XXS" ? 'selected' : ''}}>XXS</option>
-                                                <option value="XS" {{ $product->pivot->size == "XS" ? 'selected' : ''}}>XS</option>
-                                                <option value="S" {{ $product->pivot->size == "S" ? 'selected' : ''}}>S</option>
-                                                <option value="M" {{ $product->pivot->size == "M" ? 'selected' : ''}}>M</option>
-                                                <option value="L" {{ $product->pivot->size == "L" ? 'selected' : ''}}>L</option>
-                                                <option value="XL" {{ $product->pivot->size == "XL" ? 'selected' : ''}}>XL</option>
-                                                <option value="XXL" {{ $product->pivot->size == "XXL" ? 'selected' : ''}}>XXL</option>
-                                                <option value="3XL" {{ $product->pivot->size == "3XL" ? 'selected' : ''}}>3XL</option>
-                                                <option value="4XL" {{ $product->pivot->size == "4XL" ? 'selected' : ''}}>4XL</option>
-                                            </select>
-                                        </td>
                                         <td><input type="number" name="products[{{ $product->id }}][quantity]"
                                                 data-price="{{ number_format($product->sell_price, 2) }}"
-                                                class="form-control" min="1"
-                                                value="{{ $product->pivot->quantity }}"></td>
+                                                class="form-control" min="1" value="{{ $product->pivot->quantity }}">
+                                        </td>
                                         <td>
-                                            <select name="products[{{ $product->id }}][type]"
-                                                class="form-control py-0">
+                                            <select name="products[{{ $product->id }}][type]" class="form-control py-0">
                                                 <option value="buy" {{$product->pivot->type == 'buy' ? 'selected' :
                                                     ''}}>Buy</option>
                                                 <option value="rent" {{$product->pivot->type == 'rent' ? 'selected' :
                                                     ''}} data-rent-price="{{ $product->rent_price }}">Rent</option>
                                             </select>
                                         </td>
-                                        <td><input type="number" name="products[{{ $product->id }}][months]" class="form-control" step="1" min="1" value="{{ $product->pivot->months }}"></td>
+                                        <td><input type="number" name="products[{{ $product->id }}][months]"
+                                                class="form-control" step="1" min="1"
+                                                value="{{ $product->pivot->months }}"></td>
                                         <td class="product-price">
                                             @if ($product->pivot->type == 'buy')
                                             {{number_format($product->sell_price, 2)}} $
@@ -202,7 +189,9 @@
 
                             <div class="d-flex mb-3">
                                 <h4 class="my-auto">Total Price :</h4>
-                                <input type="number" class="total-price form-control mx-3" value="{{number_format($order->total_price, 2)}}" style="width: 100px" name="total_price">
+                                <input type="number" class="total-price form-control mx-3"
+                                    value="{{number_format($order->total_price, 2)}}" style="width: 100px"
+                                    name="total_price">
                                 <span class="my-auto">$</span>
                             </div>
                             {{-- <h4>Total Price in LBP : <span class="total-price">

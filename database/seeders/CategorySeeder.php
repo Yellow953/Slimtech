@@ -26,5 +26,11 @@ class CategorySeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Bundles',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }

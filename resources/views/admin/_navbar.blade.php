@@ -40,15 +40,41 @@
                             </svg>
                             <span class="my-auto">Products</span></a></li>
 
-                    <li><a href="/orders" class="d-flex w-100 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-clipboard2-check-fill my-auto" viewBox="0 0 16 16">
-                                <path
-                                    d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
-                                <path
-                                    d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
-                            </svg>
-                            <span class="my-auto">Orders</span></a></li>
+                    <li class="d-flex justify-content-between">
+                        <a href="/orders" class="d-flex justify-content-between w-100 ">
+                            <div class="d-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-clipboard2-check-fill my-auto" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
+                                    <path
+                                        d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
+                                </svg>
+                                <span class="my-auto">Orders</span>
+                            </div>
+                            @if (Helper::count_new_orders() > 0)
+                            <span class="bg-danger text-white rounded-full">{{ Helper::count_new_orders()
+                                }}</span>
+                            @endif
+                        </a>
+                    </li>
+
+                    <li class="d-flex justify-content-between">
+                        <a href="/purchases" class="d-flex justify-content-between w-100 ">
+                            <div class="d-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-bag-plus-fill my-auto" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z" />
+                                </svg>
+                                <span class="my-auto">Purchases</span>
+                            </div>
+                            @if (Helper::count_new_purchases() > 0)
+                            <span class="bg-danger text-white rounded-full">{{ Helper::count_new_purchases()
+                                }}</span>
+                            @endif
+                        </a>
+                    </li>
 
                     <li><a href="/users" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

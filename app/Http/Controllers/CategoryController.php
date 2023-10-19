@@ -29,15 +29,13 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required',
         ]);
-        $category = new Category();
-        $category->name = $request->name;
-        if ($request->description) {
-            $category->description = $request->description;
-        }
 
+        $data = $request->except('allow_rent');
+        $data['allow_rent'] = $request->boolean('allow_rent');
+
+        Category::create($data);
         $text = "Category " . $request->name . " created, datetime: " . now();
 
-        $category->save();
         Log::create(['text' => $text]);
         return redirect('/categories')->with('success', 'Category was successfully created.');
     }
@@ -51,14 +49,13 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
-        $category->name = $request->name;
-        if ($request->description) {
-            $category->description = $request->description;
-        }
 
+        $data = $request->except('allow_rent');
+        $data['allow_rent'] = $request->boolean('allow_rent');
+
+        $category->update($data);
         $text = "Category " . $category->name . " updated, datetime: " . now();
 
-        $category->save();
         Log::create(['text' => $text]);
         return redirect('/categories')->with('success', 'Category was successfully updated.');
     }
@@ -71,5 +68,18 @@ class CategoryController extends Controller
         $category->delete();
         Log::create(['text' => $text]);
         return redirect('/categories')->with('danger', 'Category was successfully deleted');
+    }
+
+    public function switch($id)
+    {
+        $category = Category::findOrFail($id);
+
+        if ($category->active) {
+            $category->update(['active' => false]);
+            return redirect()->back()->with('success', 'Category was successfully deactivated...');
+        } else {
+            $category->update(['active' => true]);
+            return redirect()->back()->with('success', 'Category was successfully activated...');
+        }
     }
 }

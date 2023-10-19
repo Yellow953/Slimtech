@@ -19,14 +19,6 @@ $(document).ready(function () {
       <tr>
         <td>${name}</td>
         <td>
-          <select name="products[${id}][size]" class="form-control py-0">
-            <option value=""></option>  
-            <option value="XXS">XXS</option>
-            <option value="XS">XS</option>
-            <!-- Add more options as needed -->
-          </select>
-        </td>
-        <td>
           <input type="number" name="products[${id}][quantity]" data-price="${price}" class="form-control" min="1" value="1">
         </td>
         <td>

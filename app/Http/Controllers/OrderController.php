@@ -30,7 +30,6 @@ class OrderController extends Controller
 
         $data = compact('categories', 'users');
         return view('orders.new', $data);
-
     } //end of new
 
     public function create(Request $request)
@@ -47,9 +46,8 @@ class OrderController extends Controller
         }
         $this->attach_order($request);
 
-        session()->flash('success', "order created successfully");
+        session()->flash('success', "Order created successfully");
         return redirect('/orders');
-
     } //end of create
 
     public function edit($id)
@@ -60,7 +58,6 @@ class OrderController extends Controller
 
         $data = compact('categories', 'order', 'users');
         return view('orders.edit', $data);
-
     } //end of edit
 
     public function update(Request $request, $id)
@@ -81,10 +78,38 @@ class OrderController extends Controller
         }
         $this->attach_order($request);
 
-        session()->flash('success', "order updated successfully");
+        session()->flash('success', "Order updated successfully");
         return redirect('/orders');
-
     } //end of update
+
+    public function show($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('orders.show', compact('order'));
+    }
+
+    public function destroy($id)
+    {
+        $order = Order::findOrFail($id);
+
+        $text = $order->user->name . " deleted Order " . $order->id . ", datetime: " . now();
+        Log::create(['text' => $text]);
+
+        $order->delete();
+        session()->flash('success', "Order successfully deleted!");
+        return redirect('/orders');
+    } //end of order
+
+    public function complete($id)
+    {
+        $order = Order::findOrFail($id);
+        $order->update([
+            'status' => 'completed'
+        ]);
+        return redirect()->back()->with('success', 'Order successfully completed!');
+    }
+
+    // Private 
 
     private function attach_order($request)
     {
@@ -108,7 +133,6 @@ class OrderController extends Controller
                     $id => [
                         'quantity' => $item['quantity'],
                         'type' => $item['type'],
-                        'size' => $item['size'],
                     ]
                 ]);
             } elseif ($item['type'] == 'rent') {
@@ -122,7 +146,6 @@ class OrderController extends Controller
                     $id => [
                         'quantity' => $item['quantity'],
                         'type' => $item['type'],
-                        'size' => $item['size'],
                         'months' => $item['months'],
                         'rented_at' => $rented_at,
                         'rented_untill' => $rented_untill,
@@ -133,7 +156,6 @@ class OrderController extends Controller
             $product->update([
                 'quantity' => $product->quantity - $item['quantity']
             ]);
-
         } //end of foreach
 
         $order->update([
@@ -152,39 +174,9 @@ class OrderController extends Controller
             $product->update([
                 'quantity' => $product->quantity + $product->pivot->quantity
             ]);
-
         } //end of for each
 
         $order->delete();
-
     } //end of detach order
-
-    public function show($id)
-    {
-        $order = Order::findOrFail($id);
-        return view('orders.show', compact('order'));
-    }
-
-    public function destroy($id)
-    {
-        $order = Order::findOrFail($id);
-
-        $text = $order->user->name . " deleted order " . $order->id . ", datetime: " . now();
-        Log::create(['text' => $text]);
-
-        $order->delete();
-        session()->flash('success', "Order successfully deleted!");
-        return redirect('/orders');
-
-    } //end of order
-
-    public function complete($id)
-    {
-        $order = Order::findOrFail($id);
-        $order->update([
-            'status' => 'completed'
-        ]);
-        return redirect()->back()->with('success', 'Order successfully completed!');
-    }
 
 }

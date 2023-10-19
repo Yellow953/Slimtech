@@ -29,7 +29,7 @@ class CartController extends Controller
                 $item = Product::find($productID);
                 if ($cart_item['type'] == 'buy') {
                     $sub_total += $item->sell_price * $cart_item['quantity'];
-                }else if($cart_item['type'] == 'rent'){
+                } else if ($cart_item['type'] == 'rent') {
                     $sub_total += $item->rent_price * $cart_item['quantity'] * $cart_item['months'];
                 }
             }
@@ -39,7 +39,8 @@ class CartController extends Controller
         return view('cart', $data);
     }
 
-    public function checkout(){
+    public function checkout()
+    {
         $sub_total = 0;
         $total = 0;
 
@@ -54,7 +55,7 @@ class CartController extends Controller
                 $item = Product::find($productID);
                 if ($cart_item['type'] == 'buy') {
                     $sub_total += $item->sell_price * $cart_item['quantity'];
-                }else if($cart_item['type'] == 'rent'){
+                } else if ($cart_item['type'] == 'rent') {
                     $sub_total += $item->rent_price * $cart_item['quantity'] * $cart_item['months'];
                 }
             }
@@ -69,7 +70,7 @@ class CartController extends Controller
     {
         $discount = 0;
         $total_price = 0;
-        
+
         try {
             $cart_items = json_decode($_COOKIE['cart'], true) ?? [];
         } catch (\Throwable $th) {
@@ -94,11 +95,11 @@ class CartController extends Controller
             }
 
             if ($cart_item['type'] == 'buy') {
-                $order->products()->attach($product, ['quantity' => $cart_item['quantity'], 'type' => 'buy', 'size' => $cart_item['size'], 'months' => $cart_item['months']]);
+                $order->products()->attach($product, ['quantity' => $cart_item['quantity'], 'type' => 'buy', 'months' => $cart_item['months']]);
                 $total_price += $product->sell_price * $cart_item['quantity'];
             } else if ($cart_item['type'] == 'rent') {
-                $order->products()->attach($product, ['quantity' => $cart_item['quantity'], 'type' => 'rent', 'size' => $cart_item['size'], 'months' => $cart_item['months'], 'rented_at' => Carbon::now(), 'rented_untill' => Carbon::now()->addMonth($cart_item['months'] ?? 1)]);
-                $total_price += $product->rent_price * $cart_item['quantity'] * ($cart_item['months']?? 1);
+                $order->products()->attach($product, ['quantity' => $cart_item['quantity'], 'type' => 'rent', 'months' => $cart_item['months'], 'rented_at' => Carbon::now(), 'rented_untill' => Carbon::now()->addMonth($cart_item['months'] ?? 1)]);
+                $total_price += $product->rent_price * $cart_item['quantity'] * ($cart_item['months'] ?? 1);
             }
 
             $product->update([
