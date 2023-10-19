@@ -63,23 +63,21 @@ function updateProductPrice(input) {
 }
   
 function calculateTotal() {
-    var price = 0;
-  
-    $(".purchase-list .product-price").each(function () {
-      price += parseFloat($(this).html().replace(/,/g, ""));
-    });
-  
-    // Update the total price input field
-    $(".total-price").val(price.toLocaleString(undefined, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }));
-  
-    // Check if price > 0
-    if (price > 0) {
-      $("#form-btn").removeClass("disabled");
-    } else {
-      $("#form-btn").addClass("disabled");
-    }
+  var total = 0;
+
+  $(".purchase-list .product-price").each(function () {
+    var priceString = $(this).html().replace(/,/g, ""); // Remove commas
+    var price = parseFloat(priceString);
+    total += price;
+  });
+
+  // Update the total price input field without formatting
+  $(".total-price").val(total.toFixed(2)); // Format to 2 decimal places
+
+  // Check if total > 0
+  if (total > 0) {
+    $("#form-btn").removeClass("disabled");
+  } else {
+    $("#form-btn").addClass("disabled");
+  }
 }
- 

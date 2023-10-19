@@ -81,20 +81,19 @@ function updateProductPriceBasedOnType(input) {
 }
 
 function calculateTotal() {
-  var price = 0;
+  var total = 0;
 
   $(".order-list .product-price").each(function () {
-    price += parseFloat($(this).html().replace(/,/g, ""));
+    var priceString = $(this).html().replace(/,/g, ""); // Remove commas
+    var price = parseFloat(priceString);
+    total += price;
   });
 
-  // Update the total price input field
-  $(".total-price").val(price.toLocaleString(undefined, {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }));
+  // Update the total price input field without formatting
+  $(".total-price").val(total.toFixed(2)); // Format to 2 decimal places
 
-  // Check if price > 0
-  if (price > 0) {
+  // Check if total > 0
+  if (total > 0) {
     $("#form-btn").removeClass("disabled");
   } else {
     $("#form-btn").addClass("disabled");
